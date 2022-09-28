@@ -16,7 +16,7 @@
 	icon_opened = "miningsecopen"
 	icon_broken = "miningsecbroken"
 	icon_off = "miningsecoff"
-	req_access = list(access_mining)
+	req_access = list(access_mining_station)
 
 /obj/structure/closet/secure_closet/miner/PopulateContents()
 	if(prob(50))

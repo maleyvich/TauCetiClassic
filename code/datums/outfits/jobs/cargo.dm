@@ -10,6 +10,17 @@
 	l_ear =  /obj/item/device/radio/headset/headset_cargo
 	belt = /obj/item/device/pda/quartermaster
 
+// MECHOPER OUTFIT
+/datum/outfit/job/mecha_operator
+	name = OUTFIT_JOB_NAME("Mecha Operator")
+
+	uniform = /obj/item/clothing/under/rank/mecha_operator
+	shoes = /obj/item/clothing/shoes/black
+	gloves = /obj/item/clothing/gloves/fingerless
+
+	l_ear = /obj/item/device/radio/headset/headset_cargo
+	belt = /obj/item/device/pda/cargo
+
 // CARGOTECH OUTFIT
 /datum/outfit/job/cargo_tech
 	name = OUTFIT_JOB_NAME("Cargo Technician")

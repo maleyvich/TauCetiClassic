@@ -8,7 +8,7 @@
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 200
 	active_power_usage = 25000
-	req_access = list(access_mining)
+	req_access = list(access_mining_station)
 	build_type = MINEFAB
 	allowed_checks = ALLOWED_CHECK_TOPIC
 	resources = list(

@@ -9,7 +9,7 @@
 	supervisors = "the head of personnel"
 	selection_color = "#d7b088"
 	idtype = /obj/item/weapon/card/id/cargoGold
-	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mining, access_mining_station, access_recycler)
+	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mint, access_mechaoper, access_mining_station, access_recycler)
 	salary = 160
 	minimal_player_ingame_minutes = 960
 	outfit = /datum/outfit/job/qm
@@ -39,6 +39,22 @@
 	outfit = /datum/outfit/job/cargo_tech
 	skillsets = list("Cargo Technician" = /datum/skillset/cargotech)
 
+/datum/job/mecha_oper
+	title = "Mecha Operator"
+	flag = MECHAOPER
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "the quartermaster and the head of personnel"
+	selection_color = "#d7b088"
+	idtype = /obj/item/weapon/card/id/cargo
+	access = list(access_maint_tunnels, access_cargo, access_cargo_bot, access_mailsorting, access_mechaoper)
+	salary = 80
+	minimal_player_ingame_minutes = 520
+	outfit = /datum/outfit/job/mecha_operator
+	skillsets = list("Mecha Operator" = /datum/skillset/mecha_operator)
+
 
 /datum/job/mining
 	title = "Shaft Miner"
@@ -50,7 +66,7 @@
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#d7b088"
 	idtype = /obj/item/weapon/card/id/cargo
-	access = list(access_mining, access_mint, access_mining_station, access_mailsorting)
+	access = list(access_mint, access_mining_station, access_mailsorting)
 	salary = 80
 	minimal_player_ingame_minutes = 480
 	outfit = /datum/outfit/job/mining
@@ -67,7 +83,7 @@
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#d7b088"
 	idtype = /obj/item/weapon/card/id/cargo
-	access = list(access_mining, access_mint, access_mailsorting, access_recycler)
+	access = list(access_mechaoper, access_mint, access_mailsorting, access_recycler)
 	salary = 60
 	minimal_player_ingame_minutes = 480
 	outfit = /datum/outfit/job/recycler

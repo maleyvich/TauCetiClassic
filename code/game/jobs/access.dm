@@ -45,7 +45,7 @@
 /var/const/access_surgery = 45
 /var/const/access_theatre = 46
 /var/const/access_research = 47
-/var/const/access_mining = 48
+/var/const/access_mechaoper = 48
 /var/const/access_mining_office = 49 //not in use
 /var/const/access_mailsorting = 50
 /var/const/access_mint = 51
@@ -202,7 +202,7 @@
 	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
 	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_construction,
 	            access_hydroponics, access_library, access_virology, access_psychiatrist, access_cmo, access_qm, access_lawyer, access_surgery,
-	            access_theatre, access_research, access_mining, access_mailsorting,
+	            access_theatre, access_research, access_mining_station, access_mailsorting,
 	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
 	            access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_minisat, access_recycler, access_detective, access_barber, access_paramedic, access_medbay_storage, access_engineering_lobby)
 
@@ -229,7 +229,7 @@
 		if(6) //station general
 			return list(access_kitchen,access_bar, access_hydroponics, access_barber, access_janitor, access_chapel_office, access_crematorium, access_library, access_lawyer, access_theatre)
 		if(7) //supply
-			return list(access_mailsorting, access_mining, access_mining_station, access_cargo, access_recycler, access_qm)
+			return list(access_mailsorting, access_mining_station, access_cargo, access_recycler, access_qm)
 
 /proc/get_region_accesses_name(code)
 	switch(code)
@@ -351,8 +351,6 @@
 			return "Manufacturing"
 		if(access_research)
 			return "Science"
-		if(access_mining)
-			return "Mining"
 		if(access_mining_office)
 			return "Mining Office"
 		if(access_mailsorting)

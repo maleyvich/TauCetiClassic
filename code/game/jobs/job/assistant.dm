@@ -15,13 +15,12 @@
 		"Reporter"       = /datum/outfit/job/assistant/reporter,
 		"Waiter"         = /datum/outfit/job/assistant/waiter,
 		"Vice Officer"   = /datum/outfit/job/assistant/vice_officer,
-		"Paranormal Investigator" = /datum/outfit/job/assistant/paranormal_investigator
+		"Paranormal Investigator" = /datum/outfit/job/assistant/paranormal_investigator,
 		)
 	outfit = /datum/outfit/job/assistant/test_subject
 	skillsets = list(
 		"Test Subject"   = /datum/skillset/test_subject,
 		"Lawyer"         = /datum/skillset/test_subject/lawyer,
-		"Mecha Operator" = /datum/skillset/test_subject/mecha,
 		"Private Eye"    = /datum/skillset/test_subject/detective,
 		"Reporter"       = /datum/skillset/test_subject/reporter,
 		"Waiter"         = /datum/skillset/test_subject/waiter,

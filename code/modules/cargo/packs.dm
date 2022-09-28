@@ -1498,7 +1498,7 @@ var/global/list/all_supply_groups = list("Operations","Security","Hospitality","
 	cost = 1500
 	crate_type = /obj/structure/closet/crate/secure/gear
 	crate_name = "Mining Explosives Crate"
-	access = access_mining
+	access = access_mining_station
 	group = "Mining"
 
 /datum/supply_pack/mining_drill
@@ -1507,7 +1507,7 @@ var/global/list/all_supply_groups = list("Operations","Security","Hospitality","
 	cost = 3000
 	crate_type = /obj/structure/closet/crate/secure/large
 	crate_name = "Drill Crate"
-	access = access_mining
+	access = access_mining_station
 	group = "Mining"
 
 /datum/supply_pack/mining_brace
@@ -1516,7 +1516,7 @@ var/global/list/all_supply_groups = list("Operations","Security","Hospitality","
 	cost = 1500
 	crate_type = /obj/structure/closet/crate/secure/large
 	crate_name = "Brace Crate"
-	access = access_mining
+	access = access_mining_station
 	group = "Mining"
 
 /datum/supply_pack/mining_supply
@@ -1530,7 +1530,7 @@ var/global/list/all_supply_groups = list("Operations","Security","Hospitality","
 	cost = 3000
 	crate_type = /obj/structure/closet/crate/secure/gear
 	crate_name = "Mining Supply Crate"
-	access = access_mining
+	access = access_mining_station
 	group = "Mining"
 
 /datum/supply_pack/mining_starterkit
@@ -1547,7 +1547,7 @@ var/global/list/all_supply_groups = list("Operations","Security","Hospitality","
 	cost = 2000
 	crate_type = /obj/structure/closet/crate/secure/gear
 	crate_name = "Shaft Miner Gear Crate"
-	access = access_mining
+	access = access_mining_station
 	group = "Mining"
 
 //----------------------------------------------

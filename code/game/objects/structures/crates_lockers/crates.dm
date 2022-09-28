@@ -406,7 +406,7 @@
 	icon_state = "miningsecurecrate"
 	icon_opened = "miningsecurecrateopen"
 	icon_closed = "miningsecurecrate"
-	req_access = list(access_mining)
+	req_access = list(access_mining_station)
 
 /obj/structure/closet/crate/secure/woodseccrate
 	desc = "A secure wooden crate."

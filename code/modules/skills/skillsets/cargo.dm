@@ -5,7 +5,13 @@
 		/datum/skill/construction = SKILL_LEVEL_TRAINED,
 		/datum/skill/command = SKILL_LEVEL_TRAINED
 	)
-
+/datum/skillset/mecha_operator
+	name = "Mecha Operator"
+	initial_skills = list(
+		/datum/skill/civ_mech = SKILL_LEVEL_MASTER,
+		/datum/skill/combat_mech = SKILL_LEVEL_MASTER,
+		/datum/skill/firearms = SKILL_LEVEL_TRAINED
+	)
 /datum/skillset/miner
 	name = "Shaft Miner"
 	initial_skills = list(

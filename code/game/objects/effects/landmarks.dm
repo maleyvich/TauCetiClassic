@@ -177,6 +177,10 @@
 	name = "Quartermaster"
 	icon_state = "Quartermaster"
 
+/obj/effect/landmark/start/mechaoperator
+	name = "Mecha Operator"
+	icon_state = "Mecha Operator"
+
 /obj/effect/landmark/start/cargo_technician
 	name = "Cargo Technician"
 	icon_state = "Cargo Technician"

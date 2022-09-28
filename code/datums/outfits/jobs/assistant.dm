@@ -56,3 +56,4 @@
 	head = /obj/item/clothing/head/indiana
 	l_pocket = /obj/item/device/occult_scanner
 	r_pocket = /obj/item/weapon/occult_pinpointer
+

@@ -42,15 +42,16 @@ var/global/const/CHEF				=(1<<3)
 var/global/const/JANITOR			=(1<<4)
 var/global/const/LIBRARIAN			=(1<<5)
 var/global/const/QUARTERMASTER		=(1<<6)
-var/global/const/CARGOTECH			=(1<<7)
-var/global/const/MINER				=(1<<8)
-var/global/const/LAWYER			=(1<<9)
-var/global/const/CHAPLAIN			=(1<<10)
-var/global/const/CLOWN				=(1<<11)
-var/global/const/MIME				=(1<<12)
-var/global/const/ASSISTANT			=(1<<13)
-var/global/const/RECYCLER			=(1<<14)
-var/global/const/BARBER			=(1<<15)
+var/global/const/MECHAOPER		    =(1<<7)
+var/global/const/CARGOTECH			=(1<<8)
+var/global/const/MINER				=(1<<9)
+var/global/const/LAWYER			=(1<<10)
+var/global/const/CHAPLAIN			=(1<<11)
+var/global/const/CLOWN				=(1<<12)
+var/global/const/MIME				=(1<<13)
+var/global/const/ASSISTANT			=(1<<14)
+var/global/const/RECYCLER			=(1<<15)
+var/global/const/BARBER			=(1<<16)
 
 var/global/list/assistant_occupations = list(
 )
@@ -106,6 +107,7 @@ var/global/list/civilian_positions = list(
 	"Janitor",
 	"Librarian",
 	"Quartermaster",
+	"Mecha Operator",
 	"Cargo Technician",
 	"Shaft Miner",
 	"Recycler",

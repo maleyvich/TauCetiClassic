@@ -599,9 +599,10 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "law"
 
 //Cargo bay
-/area/station/cargo
+
+/area/station/cargo/qm
 	name = "Quartermasters"
-	icon_state = "quart"
+	icon_state = "qm"
 
 /area/station/cargo/office
 	name = "Cargo Office"
@@ -613,9 +614,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "quartstorage"
 	sound_environment = SOUND_AREA_LARGE_METALLIC
 
-/area/station/cargo/qm
-	name = "Quartermaster's Office"
-	icon_state = "quart"
+/area/station/cargo/cargoms
+	name = "Cargo Mechstorage"
+	icon_state = "cargoms"
 
 /area/station/cargo/recycler
 	name = "Recycler"
