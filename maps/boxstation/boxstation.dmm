@@ -13351,7 +13351,7 @@
 	dir = 9;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "axd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -13672,7 +13672,7 @@
 	dir = 1;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "axJ" = (
 /obj/structure/stool/bed/chair/comfy/black{
 	dir = 8
@@ -13685,7 +13685,7 @@
 	dir = 1;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "axL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
@@ -15988,7 +15988,7 @@
 	dir = 5;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aCb" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -16049,7 +16049,7 @@
 	dir = 8;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aCh" = (
 /obj/structure/rack,
 /obj/item/weapon/wrench,
@@ -16186,7 +16186,7 @@
 /obj/structure/stool/bed/chair/office/dark,
 /obj/effect/landmark/start/quartermaster,
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aCA" = (
 /obj/machinery/camera{
 	c_tag = "Fitness Room"
@@ -16267,7 +16267,7 @@
 /area/station/hallway/primary/fore)
 "aCI" = (
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aCJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/device/radio/intercom{
@@ -16278,7 +16278,7 @@
 	dir = 4;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aCK" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1379;
@@ -18882,7 +18882,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aHL" = (
 /obj/machinery/door/poddoor{
 	density = 0;
@@ -21256,7 +21256,7 @@
 	dir = 8;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aLX" = (
 /obj/decal/boxingrope{
 	dir = 5
@@ -22347,7 +22347,7 @@
 /obj/item/weapon/clipboard,
 /obj/item/weapon/stamp/qm,
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aOc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -22668,7 +22668,7 @@
 /obj/structure/table,
 /obj/machinery/computer/stockexchange,
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aOI" = (
 /obj/machinery/camera{
 	c_tag = "Quartermaster's Office";
@@ -22682,7 +22682,7 @@
 	dir = 4;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aOJ" = (
 /obj/machinery/camera{
 	c_tag = "Hydroponics Pasture";
@@ -23366,14 +23366,14 @@
 /obj/machinery/door/firedoor,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aPW" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on,
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aPX" = (
 /obj/machinery/shower{
 	dir = 8
@@ -23599,7 +23599,7 @@
 	},
 /mob/living/simple_animal/walle,
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aQr" = (
 /turf/simulated/floor{
 	dir = 9;
@@ -24087,7 +24087,7 @@
 	dir = 4;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aRj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -26637,7 +26637,7 @@
 	dir = 8;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aVO" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -26649,7 +26649,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aVP" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable{
@@ -26658,7 +26658,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aVQ" = (
 /obj/structure/window/reinforced{
 	dir = 5
@@ -27299,7 +27299,7 @@
 	dir = 4;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aWP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -28293,7 +28293,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aYE" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -28986,7 +28986,7 @@
 	dir = 10;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aZJ" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -29025,7 +29025,7 @@
 /turf/simulated/floor{
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aZN" = (
 /obj/structure/table,
 /obj/item/weapon/coin/silver{
@@ -29042,7 +29042,7 @@
 /turf/simulated/floor{
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aZO" = (
 /obj/machinery/door/airlock/command/glass{
 	name = "Research Director";
@@ -29110,7 +29110,7 @@
 	dir = 6;
 	icon_state = "brown"
 	},
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "aZR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -76863,7 +76863,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "lOb" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -80289,7 +80289,7 @@
 /area/station/medical/chemistry)
 "qlZ" = (
 /turf/simulated/wall,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "qmb" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Aft Starboard Solar Access";
@@ -85044,7 +85044,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/station/cargo/quartermaster)
+/area/station/cargo/qm)
 "xTO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
