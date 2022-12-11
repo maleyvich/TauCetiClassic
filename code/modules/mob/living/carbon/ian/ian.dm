@@ -368,8 +368,10 @@ ADD_TO_GLOBAL_LIST(/mob/living/carbon/ian, chief_animal_list)
 
 /mob/living/carbon/ian/blob_act()
 	if (stat != DEAD)
-		adjustFireLoss(20)
+		adjustFireLoss(60)
 		updatehealth()
+		if (prob(50))
+			Paralyse(10)
 	else
 		gib()
 

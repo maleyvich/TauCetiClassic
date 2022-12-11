@@ -123,18 +123,6 @@
 	// int, [0...]
 	var/cost
 
-/datum/stat/wizard_info
-	// array of objects
-	var/list/datum/stat/book_purchase/book_purchases
-
-/datum/stat/book_purchase
-	// string, byond_type
-	var/power_type
-	// string, anything
-	var/power_name
-	// int, [0...]
-	var/cost
-
 /datum/stat/role
 	// Default stats
 	// string, pool in ./code/game/gamemodes/roles in var name
@@ -164,9 +152,6 @@
 	var/datum/stat/uplink_info/uplink_info = null
 	// object
 	var/datum/stat/changeling_info/changeling_info = null
-	// object
-	var/datum/stat/wizard_info/wizard_info = null
-
 
 /datum/stat/role/proc/set_custom_stat(datum/role/R)
 	var/datum/component/gamemode/syndicate/S = R.GetComponent(/datum/component/gamemode/syndicate)
@@ -192,12 +177,3 @@
 		_changeling_info.changeling_purchase += stat
 
 	changeling_info = _changeling_info
-
-/datum/stat/role/wizard/set_custom_stat(datum/role/wizard/W)
-	var/datum/stat/wizard_info/_wizard_info = new
-
-	_wizard_info.book_purchases = list()
-	for(var/datum/stat/book_purchase/book_stat in W.list_of_purchases)
-		_wizard_info.book_purchases += book_stat
-
-	wizard_info = _wizard_info

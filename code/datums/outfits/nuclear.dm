@@ -63,15 +63,15 @@
 	r_pocket = /obj/item/weapon/storage/pouch/pistol_holster/revolver
 
 /datum/outfit/nuclear/unathi_equip()
-	backpack_contents += list(/obj/item/device/modkit/unathi)
+	backpack_contents += list(/obj/item/device/modkit/syndie/unathi)
 
 /datum/outfit/nuclear/tajaran_equip()
-	backpack_contents += list(/obj/item/device/modkit/tajaran)
+	backpack_contents += list(/obj/item/device/modkit/syndie/tajaran)
 
 /datum/outfit/nuclear/skrell_equip()
-	backpack_contents += list(/obj/item/device/modkit/skrell)
+	backpack_contents += list(/obj/item/device/modkit/syndie/skrell)
 
 /datum/outfit/nuclear/vox_equip()
-	backpack_contents += list(/obj/item/device/modkit/vox)
+	backpack_contents += list(/obj/item/device/modkit/syndie/vox)
 	l_hand = /obj/item/weapon/tank/nitrogen
 	mask = /obj/item/clothing/mask/gas/vox

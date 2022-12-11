@@ -84,10 +84,10 @@
 			return FALSE
 	return loc && !isturf(loc) && !is_type_in_list(loc, ignore_vision_inside)
 
-/mob/living/proc/handle_vision(vision_for_dead = FALSE)
+/mob/living/proc/handle_vision()
 	update_sight()
 
-	if(vision_for_dead || stat != DEAD)
+	if(stat != DEAD)
 		if(blinded)
 			throw_alert("blind", /atom/movable/screen/alert/blind)
 			overlay_fullscreen("blind", /atom/movable/screen/fullscreen/blind)

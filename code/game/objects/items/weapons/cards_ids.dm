@@ -182,6 +182,12 @@
 	icon_state = "civ"
 	item_state = "civ_id"
 
+/obj/item/weapon/card/id/blueshield
+	name = "identification card"
+	desc = "A card issued to Blueshield stuff."
+	icon_state = "blueshield"
+	item_state = "blueshield_id"
+
 /obj/item/weapon/card/id/civGold //This is not the HoP. There's no position that uses this right now.
 	name = "identification card"
 	desc = "A card which represents common sense and responsibility."

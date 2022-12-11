@@ -218,3 +218,6 @@
 	sleep(11)
 	move_self = TRUE
 	icon = initial(icon)
+
+/obj/singularity/narsie/update_icon(stage)
+	return

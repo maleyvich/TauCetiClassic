@@ -93,6 +93,24 @@
 		/obj/item/weapon/implant/mind_protect/loyalty
 		)
 
+// BLUESHIELD OFFICER OUTFIT
+/datum/outfit/job/blueshield_officer
+	name = OUTFIT_JOB_NAME("Blueshield Officer")
+
+	uniform = /obj/item/clothing/under/rank/blueshield
+	shoes = /obj/item/clothing/shoes/black
+	glasses = /obj/item/clothing/glasses/sunglasses/hud/sechud
+
+	l_ear = /obj/item/device/radio/headset/headset_int
+	belt = /obj/item/device/pda/blueshield
+
+
+	l_pocket = /obj/item/device/flash
+
+	implants = list(
+		/obj/item/weapon/implant/mind_protect/loyalty
+		)
+
 // CLOWN OUTFIT
 /datum/outfit/job/clown
 	name = OUTFIT_JOB_NAME("Clown")

@@ -26,7 +26,7 @@
 	..()
 
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/can_be_node(obj/machinery/atmospherics/pipe/simple/heat_exchanging/target)
-	if(istype(target, /obj/machinery/atmospherics/pipe/simple/heat_exchanging) && ..())
+	if(istype(target, /obj/machinery/atmospherics/pipe/simple/heat_exchanging) && (target.initialize_directions & get_dir(target, src)) && (target.initialize_directions & initialize_directions))
 		return TRUE
 
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/process_atmos()

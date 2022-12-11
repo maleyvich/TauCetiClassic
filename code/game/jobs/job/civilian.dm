@@ -219,13 +219,24 @@
 	minimal_player_ingame_minutes = 1560
 	outfit = /datum/outfit/job/lawyer
 	skillsets = list("Internal Affairs Agent" = /datum/skillset/internal_affairs)
-	/*
-		HEY YOU!
-		ANY TIME YOU TOUCH THIS, PLEASE CONSIDER GOING TO preferences_savefile.dm
-		AND BUMPING UP THE SAVEFILE_VERSION_MAX, AND SAVEFILE_VERSION_SPECIES_JOBS
-		~Luduk
-	*/
 	restricted_species = list(SKRELL, UNATHI, TAJARAN, DIONA, VOX)
+
+/datum/job/blueshield
+	title = "Blueshield Officer"
+	flag = BLUESHIELD
+	department_flag = CIVILIAN
+	faction = "Station"
+	total_positions = 1
+	spawn_positions = 1
+	supervisors = "The Central Command"
+	selection_color = "#dddddd"
+	idtype = /obj/item/weapon/card/id/blueshield
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_lawyer, access_medical, access_research,)
+	salary = 150
+	minimal_player_ingame_minutes = 2000
+	outfit = /datum/outfit/job/blueshield_officer
+	skillsets = list("Blueshield Officer" = /datum/skillset/blueshield_officer)
+	restricted_species = list(SKRELL, UNATHI, TAJARAN, DIONA, VOX, IPC)
 
 
 /datum/job/clown

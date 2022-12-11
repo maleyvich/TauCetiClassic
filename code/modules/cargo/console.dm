@@ -1,6 +1,3 @@
-var/global/list/cargo_consoles = list()
-
-ADD_TO_GLOBAL_LIST(/obj/machinery/computer/cargo, cargo_consoles)
 /obj/machinery/computer/cargo
 	name = "Supply console"
 	desc = "Used to order supplies, approve requests, and control the shuttle."
@@ -46,8 +43,7 @@ ADD_TO_GLOBAL_LIST(/obj/machinery/computer/cargo, cargo_consoles)
 	else
 		dat += {"<BR><B>Supply shuttle</B><HR>
 		Location: [SSshuttle.moving ? "Moving to station ([SSshuttle.eta] Mins.)":SSshuttle.at_station ? "Station":"Dock"]<BR>
-		<HR>Cargo Dep credits: [global.cargo_account.money]<BR>
-		Cargo Dep Number: [global.cargo_account.account_number]<BR>\n<BR>
+		<HR>Cargo Dep credits: [global.cargo_account.money]<BR>\n<BR>
 		<HR>Export tax: [SSeconomy.tax_cargo_export]%<BR>\n<BR>"}
 		if(requestonly)
 			dat += "\n<A href='?src=\ref[src];order=categories'>Request items</A><BR><BR>"

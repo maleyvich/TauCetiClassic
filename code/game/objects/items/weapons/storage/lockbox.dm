@@ -24,7 +24,6 @@
 			if(locked)
 				icon_state = icon_locked
 				to_chat(user, "<span class='warning'>You lock the [src]!</span>")
-				close_all() // close the content window for all mobs, when lock lockbox
 				return
 			else
 				icon_state = icon_closed
@@ -52,15 +51,6 @@
 	else
 		to_chat(user, "<span class='warning'>Its locked!</span>")
 
-/obj/item/weapon/storage/lockbox/attack_hand(mob/user)
-	if ((loc == user) && locked)
-		to_chat(user, "<span class='warning'>[src] is locked and cannot be opened!</span>")
-	else if ((loc == user) && !locked)
-		open(user)
-	else
-		..()
-	add_fingerprint(user)
-
 /obj/item/weapon/storage/lockbox/emag_act(mob/user)
 	if(broken)
 		return FALSE
@@ -74,7 +64,7 @@
 /obj/item/weapon/storage/lockbox/try_open(mob/user)
 	if(locked && !broken)
 		if(user.in_interaction_vicinity(src))
-			to_chat(user, "<span class='warning'>[src] is locked and cannot be opened!</span>")
+			to_chat(user, "<span class='warning'>Its locked!</span>")
 		return FALSE
 	else
 		return ..()

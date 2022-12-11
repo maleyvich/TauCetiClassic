@@ -109,13 +109,20 @@
 	flags = ONESIZEFITSALL
 
 
+/obj/item/clothing/under/rank/blueshield
+	desc = "A very solid blue uniform with gold splashes."
+	name = "blueshield officer uniform"
+	icon_state = "blueshield"
+	item_state = "blueshield"
+	flags = ONESIZEFITSALL
+
+
 /obj/item/clothing/under/rank/janitor
 	desc = "It's the official uniform of the station's janitor. It has minor protection from biohazards."
 	name = "janitor's jumpsuit"
 	icon_state = "janitor"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
 	flags = ONESIZEFITSALL
-	can_get_wet = FALSE
 
 
 /obj/item/clothing/under/lawyer

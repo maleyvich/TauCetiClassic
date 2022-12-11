@@ -22,6 +22,16 @@
 		/datum/skill/police = SKILL_LEVEL_PRO,
 	)
 
+/datum/skillset/blueshield_officer
+	name = "Blueshield Officer"
+	initial_skills = list(
+		/datum/skill/firearms = SKILL_LEVEL_MASTER,
+		/datum/skill/police = SKILL_LEVEL_PRO,
+		/datum/skill/melee = SKILL_LEVEL_PRO,
+		/datum/skill/combat_mech = SKILL_LEVEL_TRAINED,
+		/datum/skill/command = SKILL_LEVEL_NOVICE,
+		/datum/skill/medical = SKILL_LEVEL_PRO
+	)
 /datum/skillset/internal_affairs
 	name = "Internal Affairs Agent"
 	initial_skills = list(

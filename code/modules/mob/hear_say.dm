@@ -304,9 +304,10 @@
 			heardword = copytext(heardword,2)
 		if(copytext(heardword,-1) in punctuation)
 			heardword = copytext(heardword,1,-1)
-		heard = "<span class='notice italic'>... [heardword] ...</span>"
+		heard = "<span class = 'game_say'>...You hear something about...[heardword]</span>"
+
 	else
-		return
+		heard = "<span class = 'game_say'>...<i>You almost hear someone talking</i>...</span>"
 
 	to_chat(src, heard)
 
