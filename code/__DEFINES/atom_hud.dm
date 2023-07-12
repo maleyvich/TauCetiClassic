@@ -67,6 +67,7 @@
 #define ANTAG_HUD_REV           "antag_hud_rev"
 #define ANTAG_HUD_OPS           "antag_hud_ops"
 #define ANTAG_HUD_WIZ           "antag_hud_wiz"
+#define ANTAG_HUD_HER			"antag_hud_her"
 #define ANTAG_HUD_SHADOW        "antag_hud_shadow"
 #define ANTAG_HUD_TRAITOR       "antag_hud_traitor"
 #define ANTAG_HUD_NINJA         "antag_hud_ninja"

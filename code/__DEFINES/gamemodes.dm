@@ -60,6 +60,7 @@
 #define UNDERCOVER_COP "Undercover Officer"
 #define VOXRAIDER "Vox Raider"
 #define WIZARD "Wizard"
+#define HERETIC "Heretic"
 #define WIZ_APPRENTICE "Wizard Apprentice"
 #define XENOMORPH "Xenomorph"
 #define REPLICATOR "Replicator"

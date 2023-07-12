@@ -7,6 +7,7 @@
 #define ROLE_OPERATIVE         "Operative"
 #define ROLE_CHANGELING        "Changeling"
 #define ROLE_WIZARD            "Wizard"
+#define ROLE_HERETIC           "Heretic"
 #define ROLE_MALF              "Malf AI"
 #define ROLE_REV               "Revolutionary"
 #define ROLE_ALIEN             "Xenomorph"
