@@ -141,8 +141,10 @@
 			visible_message("<span class='notice'>\the [attached] is already attached to tank</span>")
 			return
 		attached.internal = holding
+		attached.internals?.update_icon(attached)
 	else if(attached.internal == holding)
 		attached.internal = null
+		attached.internals?.update_icon(attached)
 
 /obj/machinery/life_assist/cardiopulmonary_bypass/assist(mob/living/carbon/human/H)
 	..()

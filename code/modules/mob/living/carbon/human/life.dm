@@ -354,6 +354,7 @@ var/global/list/tourette_bad_words= list(
 
 	if(!(HAS_TRAIT(src, TRAIT_AV) || (contents.Find(internal) && wear_mask && (wear_mask.flags & MASKINTERNALS))))
 		internal = null
+		internals?.update_icon(src)
 		return null
 
 	//internal breath sounds
