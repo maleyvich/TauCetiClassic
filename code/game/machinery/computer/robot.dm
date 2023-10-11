@@ -106,6 +106,7 @@
 		<A href='?src=\ref[src];temp=1'>Cancel</A>"}
 
 	else if (href_list["eject2"])
+		var/mob/living/silicon/robot/R
 		if(allowed(usr))
 			if (!status)
 				message_admins("<span class='notice'>[key_name_admin(usr)] has initiated the global cyborg killswitch! [ADMIN_JMP(usr)]</span>")
@@ -113,6 +114,9 @@
 				src.status = 1
 				start_sequence()
 				src.temp = null
+		if(iscultist(R))
+			return
+			to_chat(usr, "Somebody robots do not obey NT!")
 		else
 			to_chat(usr, "<span class='warning'>Access Denied.</span>")
 
@@ -154,6 +158,9 @@
 						else
 							message_admins("<span class='notice'>[key_name_admin(usr)] [ADMIN_JMP(usr)] detonated [R.name]! [ADMIN_JMP(R)]</span>")
 							log_game("[key_name(usr)] detonated [R.name]!")
+						if(iscultist(R))
+							return
+							to_chat(R, "These heretics wanted to blow you up...")
 							R.self_destruct()
 		else
 			to_chat(usr, "<span class='warning'>Access Denied.</span>")
