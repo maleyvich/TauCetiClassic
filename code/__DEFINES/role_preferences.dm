@@ -4,6 +4,7 @@
 //These are synced with the Database, if you change the values of the defines
 //then you MUST update the database! Jobbans also uses those defines!!
 #define ROLE_TRAITOR           "Traitor"
+#define ROLE_TRAITOR           "Heretic"
 #define ROLE_OPERATIVE         "Operative"
 #define ROLE_CHANGELING        "Changeling"
 #define ROLE_WIZARD            "Wizard"
