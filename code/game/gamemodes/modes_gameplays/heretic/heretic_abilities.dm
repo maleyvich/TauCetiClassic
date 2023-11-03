@@ -1,12 +1,12 @@
-/obj/effect/proc_holder/spell/targeted/glare
-	name = "Glare"
-	desc = "Stuns and mutes a target for a decent duration."
-	panel = "Shadowling Abilities"
+/obj/effect/proc_holder/spell/targeted/unfire
+	name = "Unholy Fire"
+	desc = "Stuns target for a decent duration. Improves with learning some paths."
+	panel = "Heretic Abilities"
 	action_icon_state = "glare"
-	charge_max = 300
+	charge_max = 150
 	clothes_req = 0
 
-/obj/effect/proc_holder/spell/targeted/glare/cast(list/targets)
+/obj/effect/proc_holder/spell/targeted/unfire/cast(list/targets)
 	for(var/mob/living/carbon/human/target in targets)
 		if(target.species.flags[NO_SCAN] || target.species.flags[IS_SYNTHETIC])
 			charge_counter = charge_max
