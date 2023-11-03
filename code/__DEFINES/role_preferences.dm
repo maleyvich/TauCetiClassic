@@ -39,6 +39,7 @@
 
 var/global/list/special_roles_ignore_question = list(
 	ROLE_TRAITOR    = null,
+	ROLE_HERETIC	= null,
 	ROLE_OPERATIVE  = list(IGNORE_SYNDI_BORG),
 	ROLE_CHANGELING = null,
 	ROLE_WIZARD     = null,
