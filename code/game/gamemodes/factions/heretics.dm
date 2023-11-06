@@ -8,6 +8,7 @@
 
 	min_roles = 1
 	max_roles = 3
+	accept_latejoiners = FALSE
 
 	logo_state = "change-logoa"
 
@@ -15,8 +16,17 @@
 	max_roles = 1 + round(num_players / 10)
 	return TRUE
 
-/datum/faction/changeling/GetFactionHeader()
+/datum/faction/heretic/GetFactionHeader()
 	var/icon/logo_left = get_logo_icon("change-logoa")
 	var/icon/logo_right = get_logo_icon("change-logob")
 	var/header = {"[bicon(logo_left, css = "style='position:relative; top:10px;'")] <FONT size = 2><B>[capitalize(name)]</B></FONT> [bicon(logo_right, css = "style='position:relative; top:10px;'")]"}
 	return header
+
+/datum/faction/heretic/forgeObjectives()
+	SHOULD_CALL_PARENT(TRUE)
+	if(config.objectives_disabled)
+		return FALSE
+	AppendObjective(/datum/objective/heretic_maxpath)
+	for(var/datum/role/R in members)
+		R.forgeObjectives()
+	return TRUE

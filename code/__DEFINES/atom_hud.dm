@@ -69,6 +69,7 @@
 #define ANTAG_HUD_WIZ           "antag_hud_wiz"
 #define ANTAG_HUD_SHADOW        "antag_hud_shadow"
 #define ANTAG_HUD_TRAITOR       "antag_hud_traitor"
+#define ANTAG_HUD_HERETIC		"antag_hud_heretic"
 #define ANTAG_HUD_NINJA         "antag_hud_ninja"
 #define ANTAG_HUD_CHANGELING    "antag_hud_chang"
 #define ANTAG_HUD_ABDUCTOR      "antag_hud_abductor"
