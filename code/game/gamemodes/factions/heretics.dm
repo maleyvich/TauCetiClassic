@@ -23,9 +23,7 @@
 	return header
 
 /datum/faction/heretic/forgeObjectives()
-	SHOULD_CALL_PARENT(TRUE)
-	if(config.objectives_disabled)
-		return FALSE
+	. = ..()
 	AppendObjective(/datum/objective/heretic_maxpath)
 	for(var/datum/role/R in members)
 		R.forgeObjectives()
