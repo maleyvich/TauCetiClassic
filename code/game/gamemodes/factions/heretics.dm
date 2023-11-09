@@ -25,6 +25,7 @@
 /datum/faction/heretic/forgeObjectives()
 	. = ..()
 	AppendObjective(/datum/objective/heretic_maxpath)
+	AppendObjective(/datum/objective/heretic_rampage)
 	for(var/datum/role/R in members)
 		R.forgeObjectives()
 	return TRUE
