@@ -11,4 +11,10 @@
 	if(!all_eheretics.len)
 		return OBJECTIVE_LOSS
 
+	var/list/detect_aliveheretics = find_faction_by_member(datum/role/R, datum/mind/M)
+		for(var/datum/faction/F in SSticker.mode.factions)
+			for(var/datum/role/RR in F.members)
+				if(RR == R || RR.antag == M)
+					return F
+
 
