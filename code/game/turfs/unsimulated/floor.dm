@@ -1,5 +1,6 @@
 /turf/unsimulated/floor
-	name = "floor"
+	name = "плитка пола"
+	cases = list("плитки пола", "плитке пола", "плитку пола", "плиткой пола", "плитке пола")
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "floor"
 
@@ -7,7 +8,8 @@
 	return attack_hand(user)
 
 /turf/unsimulated/floor/abductor
-	name = "alien floor"
+	name = "иннопланетная плитка"
+	cases = list("плитки пола", "плитке пола", "плитку пола", "плиткой пола", "плитке пола")
 	icon_state = "alienpod1"
 
 /turf/unsimulated/floor/abductor/atom_init()
@@ -15,7 +17,7 @@
 	icon_state = "alienpod[rand(1,9)]"
 
 /turf/unsimulated/floor/fakealien
-	name = "alien weed"
+	name = "иннопланетная трава"
 	icon = 'icons/mob/xenomorph.dmi'
 	icon_state = "weeds"
 
@@ -23,7 +25,8 @@
 	icon_state = "weednode"
 
 /turf/unsimulated/floor/snow
-	name = "snow"
+	name = "снег"
+	cases = list("снега", "снегу","снег", "снегом", "снеге")
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow"
 
