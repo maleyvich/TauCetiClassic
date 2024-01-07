@@ -156,6 +156,7 @@
 	if(istype(tool, /obj/item/organ/internal))
 		var/obj/item/organ/internal/H = tool
 		BP.bodypart_organs += tool
+		target.check_restricted()
 		H.insert_organ(target)
 	user.drop_from_inventory(tool, target)
 	BP.hidden = tool
@@ -262,13 +263,14 @@
 					target.sec_hud_set_implants()
 			if("Organs")
 				var/choosen_object = show_radial_menu(user, target, internal_object_organs, radius = 50, require_near = TRUE, tooltips = TRUE)
+				target.check_restricted()
 				if(choosen_object)
 					if(istype(choosen_object, /obj/item/organ/internal))
 						var/obj/item/organ/internal/H = choosen_object
 						BP.bodypart_organs -= choosen_object
 						H.remove_organ(choosen_object)
 						H.loc = get_turf(target)
-					else if(istype(choosen_object, /obj/item/organ/internal/brain))
+					if(istype(choosen_object, /obj/item/organ/internal/brain))
 						var/mob/living/simple_animal/borer/borer = target.has_brain_worms()
 						if(borer)
 							borer.detatch() //Should remove borer if the brain is removed - RR

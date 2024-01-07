@@ -72,7 +72,6 @@
 
 		//** Handle the effects of infections
 		var/antibiotics = owner.reagents.get_reagent_amount("spaceacillin")
-		var/prev_organ_races = organ_races
 
 		if (germ_level > 0 && germ_level < INFECTION_LEVEL_ONE/2 && prob(30))
 			germ_level--
@@ -87,10 +86,6 @@
 			//spread germs
 			if (antibiotics < 5 && BP.germ_level < germ_level && ( BP.germ_level < INFECTION_LEVEL_ONE * 2 || prob(30) ))
 				BP.germ_level++
-
-		if(organ_races != prev_organ_races)
-			to_chat(owner, "<span class='warning'>You feel distortion inside body...</span>")
-			owner.adjustToxLoss(1.5)
 
 			if (prob(3))	//about once every 30 seconds
 				take_damage(1,silent=prob(30))

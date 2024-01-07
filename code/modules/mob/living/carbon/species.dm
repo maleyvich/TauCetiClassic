@@ -133,6 +133,14 @@
 		,O_KIDNEYS = /obj/item/organ/internal/kidneys
 		)
 
+	var/list/restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart/vox, /obj/item/organ/internal/heart/ipc,
+		O_EYES = /obj/item/organ/internal/eyes/ipc,
+		O_LUNGS = /obj/item/organ/internal/lungs/vox, /obj/item/organ/internal/lungs/diona, /obj/item/organ/internal/lungs/ipc, /obj/item/organ/internal/lungs/skrell,
+		O_LIVER = /obj/item/organ/internal/liver/vox, /obj/item/organ/internal/liver/diona, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys/vox, /obj/item/organ/internal/kidneys/diona, /obj/item/organ/internal/kidneys/ipc
+		)
+
 	var/has_gendered_icons = TRUE // if TRUE = use icon_state with _f or _m for respective gender (see get_icon() external organ proc).
 
 	var/list/survival_kit_items = list(/obj/item/clothing/mask/breath,
@@ -514,6 +522,14 @@
 		O_KIDNEYS = /obj/item/organ/internal/kidneys
 		)
 
+	restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart/vox, /obj/item/organ/internal/heart/ipc,
+		O_EYES = /obj/item/organ/internal/eyes/ipc,
+		O_LUNGS = /obj/item/organ/internal/lungs/vox, /obj/item/organ/internal/lungs/diona, /obj/item/organ/internal/lungs/ipc,
+		O_LIVER = /obj/item/organ/internal/liver/vox, /obj/item/organ/internal/liver/diona, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys/vox, /obj/item/organ/internal/kidneys/diona, /obj/item/organ/internal/kidneys/ipc
+		)
+
 	eyes = "skrell_eyes"
 	blood_datum_path = /datum/dirt_cover/purple_blood
 	flesh_color = "#8cd7a3"
@@ -580,6 +596,14 @@
 		O_LUNGS   = /obj/item/organ/internal/lungs/vox,
 		O_LIVER   = /obj/item/organ/internal/liver/vox,
 		O_KIDNEYS = /obj/item/organ/internal/kidneys/vox
+		)
+
+	restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart, /obj/item/organ/internal/heart/ipc,
+		O_EYES = /obj/item/organ/internal/eyes/ipc,
+		O_LUNGS = /obj/item/organ/internal/lungs/diona, /obj/item/organ/internal/lungs/ipc,
+		O_LIVER = /obj/item/organ/internal/liver/diona, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys/diona, /obj/item/organ/internal/kidneys/ipc
 		)
 
 	blood_datum_path = /datum/dirt_cover/blue_blood
@@ -803,6 +827,14 @@
 		O_KIDNEYS = /obj/item/organ/internal/kidneys/diona
 		)
 
+	restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart/vox, /obj/item/organ/internal/heart/ipc,
+		O_EYES = /obj/item/organ/internal/eyes/ipc,
+		O_LUNGS = /obj/item/organ/internal/lungs/vox, /obj/item/organ/internal/lungs/ipc,
+		O_LIVER = /obj/item/organ/internal/liver/vox, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys/vox, /obj/item/organ/internal/kidneys/ipc
+		)
+
 	blood_datum_path = /datum/dirt_cover/green_blood
 	flesh_color = "#907e4a"
 
@@ -938,6 +970,14 @@
 		O_KIDNEYS = /obj/item/organ/internal/kidneys/diona
 		)
 
+	restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart/vox, /obj/item/organ/internal/heart/ipc,
+		O_EYES = /obj/item/organ/internal/eyes/ipc,
+		O_LUNGS = /obj/item/organ/internal/lungs/vox, /obj/item/organ/internal/lungs/ipc,
+		O_LIVER = /obj/item/organ/internal/liver/vox, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys/vox, /obj/item/organ/internal/kidneys/ipc
+		)
+
 	regen_mod = 0.5
 	regen_limbs = FALSE
 
@@ -1031,6 +1071,15 @@
 		,O_LUNGS   = /obj/item/organ/internal/lungs/ipc
 		,O_LIVER   = /obj/item/organ/internal/liver/ipc
 		,O_KIDNEYS = /obj/item/organ/internal/kidneys/ipc
+		)
+
+	restricted_organ = list(
+		O_HEART = /obj/item/organ/internal/heart, /obj/item/organ/internal/heart/vox,
+		O_BRAIN   = /obj/item/organ/internal/brain,
+		O_EYES = /obj/item/organ/internal/eyes,
+		O_LUNGS = /obj/item/organ/internal/lungs, /obj/item/organ/internal/lungs/vox, /obj/item/organ/internal/lungs/skrell,
+		O_LIVER = /obj/item/organ/internal/liver, /obj/item/organ/internal/liver/vox, /obj/item/organ/internal/liver/ipc,
+		O_KIDNEYS = /obj/item/organ/internal/kidneys, /obj/item/organ/internal/kidneys/vox, /obj/item/organ/internal/kidneys/ipc
 		)
 
 	blood_datum_path = /datum/dirt_cover/oil

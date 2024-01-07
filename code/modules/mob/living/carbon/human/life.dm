@@ -808,6 +808,14 @@ var/global/list/tourette_bad_words= list(
 			if(!E.len)
 				embedded_flag = 0
 
+/mob/living/carbon/human/proc/check_restricted()
+	for(var/organ_tag in species.has_organ)
+		var/mob/living/L = organ_tag
+		if(species.has_organ[organ_tag] == species.restricted_organ[organ_tag])
+			L.adjustToxLoss(4)
+			to_chat(species, "<span class='warning'>You feel a distortion inside your body.")
+
+
 /mob/living/carbon/human/proc/check_organ_status()
 	//Eyes
 	if(should_have_organ(O_EYES) && !has_organ(O_EYES))
