@@ -10,7 +10,7 @@
 	interact_offline = TRUE
 	var/obj/item/weapon/stock_parts/cell/charging = null
 	var/chargelevel = -1
-	var/recharge_coeff = 1
+	var/recharge_coeff = 5
 	var/efficiency = 0.875	//<1.0 means some power is lost in the charging process, >1.0 means free energy.
 
 /obj/machinery/cell_charger/atom_init()
