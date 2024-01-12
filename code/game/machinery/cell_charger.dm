@@ -24,7 +24,7 @@
 	..()
 
 	for(var/obj/item/weapon/stock_parts/capacitor/C in component_parts)
-		recharge_coeff = C.rating
+		recharge_coeff = C.rating * 4
 
 /obj/machinery/cell_charger/proc/updateicon()
 	icon_state = "ccharger[charging ? 1 : 0]"
