@@ -1,7 +1,8 @@
 /datum/reagent/srejuvenate
 	name = "Soporific Rejuvenant"
+	cases = list("снотворное", "снотворного", "снотворному", "снотворное", "снотворным", "снотворном")
 	id = "stoxin2"
-	description = "Put people to sleep, and heals them."
+	description = "Усыпляет людей и исцеляет их."
 	reagent_state = LIQUID
 	color = "#c8a5dc" // rgb: 200, 165, 220
 	custom_metabolism = REAGENTS_METABOLISM * 0.5
@@ -37,8 +38,9 @@
 
 /datum/reagent/inaprovaline
 	name = "Inaprovaline"
+	cases = list("инапровалин", "инапровалина", "инапровалину", "инапровалин", "инапровалином", "инапровалине")
 	id = "inaprovaline"
-	description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients."
+	description = "Инапровалин - синаптический стимулятор и кардиостимулятор. Обычно используется для стабилизации состояния пациентов."
 	reagent_state = LIQUID
 	color = "#00bfff" // rgb: 200, 165, 220
 	custom_metabolism = REAGENTS_METABOLISM * 0.5
@@ -57,8 +59,9 @@
 
 /datum/reagent/ryetalyn
 	name = "Ryetalyn"
+	cases = list("риеталин", "риеталина", "риеталину", "инапровалин", "риеталином", "риеталине")
 	id = "ryetalyn"
-	description = "Ryetalyn can cure all genetic abnomalities via a catalytic process."
+	description = "Риеталин может излечивать все генетические аномалии с помощью каталитического процесса."
 	reagent_state = SOLID
 	color = "#004000" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE
@@ -83,8 +86,9 @@
 
 /datum/reagent/paracetamol
 	name = "Paracetamol"
+	cases = list("парацетамол", "парацетамола", "парацетамолу", "парацетамол", "парацетамолом", "парацетамоле")
 	id = "paracetamol"
-	description = "Most probably know this as Tylenol, but this chemical is a mild, simple painkiller."
+	description = "Большинство, вероятно, знают его как тайленол, но это химическое вещество - слабое, простое болеутоляющее средство."
 	reagent_state = LIQUID
 	color = "#c8a5dc"
 	overdose = REAGENTS_OVERDOSE * 2
@@ -98,8 +102,9 @@
 
 /datum/reagent/tramadol
 	name = "Tramadol"
+	cases = list("трамадол", "трамадола", "трамадолу", "трамадол", "трамадолом", "трамадоле")
 	id = "tramadol"
-	description = "A simple, yet effective painkiller."
+	description = "Простое, но эффективное болеутоляющее средство."
 	reagent_state = LIQUID
 	color = "#cb68fc"
 	overdose = REAGENTS_OVERDOSE
@@ -114,8 +119,9 @@
 
 /datum/reagent/oxycodone
 	name = "Oxycodone"
+	cases = list("оксикодон", "оксикодона", "оксикодону", "оксикодон", "оксикодоном", "оксикодоне")
 	id = "oxycodone"
-	description = "An effective and very addictive painkiller."
+	description = "Эффективное и вызывающее привыкание болеутоляющее средство."
 	reagent_state = LIQUID
 	color = "#800080"
 	overdose = 20
@@ -131,8 +137,9 @@
 
 /datum/reagent/sterilizine
 	name = "Sterilizine"
+	cases = list("стерилизин", "стерилизина", "стерилизину", "стерилизин", "стерилизином", "стерилизине")
 	id = "sterilizine"
-	description = "Sterilizes wounds in preparation for surgery."
+	description = "Стерилизует раны для подготовки к операции."
 	reagent_state = LIQUID
 	color = "#c8a5dc" // rgb: 200, 165, 220
 
@@ -156,8 +163,9 @@
 
 /datum/reagent/leporazine
 	name = "Leporazine"
+	cases = list("лепорацин", "лепорацина", "лепорацину", "лепорацин", "лепорацином", "лепорацине")
 	id = "leporazine"
-	description = "Leporazine can be use to stabilize an individuals body temperature."
+	description = "Лепоразин может использоваться для стабилизации температуры тела."
 	reagent_state = LIQUID
 	color = "#c8a5dc" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE
@@ -172,8 +180,9 @@
 
 /datum/reagent/kelotane
 	name = "Kelotane"
+	cases = list("келотан", "келотана", "келотану", "келотан", "келотаном", "келотане")
 	id = "kelotane"
-	description = "Kelotane is a drug used to treat burns."
+	description = "Келотан - это препарат, используемый для лечения ожогов."
 	reagent_state = LIQUID
 	color = "#ffc600" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE
@@ -186,8 +195,9 @@
 
 /datum/reagent/dermaline
 	name = "Dermaline"
+	cases = list("дермалин", "дермалина", "дермалину", "дермалин", "дермалином", "дермалине")
 	id = "dermaline"
-	description = "Dermaline is the next step in burn medication. Works twice as good as kelotane and enables the body to restore even the direst heat-damaged tissue."
+	description = "Дермалин - это следующий шаг в лечении ожогов. Действует в два раза лучше келотана и позволяет организму восстанавливать даже самые сильно поврежденные теплом ткани."
 	reagent_state = LIQUID
 	color = "#ff8000" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE * 0.5
@@ -204,8 +214,9 @@
 
 /datum/reagent/dexalin
 	name = "Dexalin"
+	cases = list("дексалин", "дексалина", "дексалину", "дексалин", "дексалином", "дексалине")
 	id = "dexalin"
-	description = "Dexalin is used in the treatment of oxygen deprivation."
+	description = "Дексалин используется для лечения кислородного голодания."
 	reagent_state = LIQUID
 	color = "#0080ff" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE
@@ -226,8 +237,9 @@
 
 /datum/reagent/dextromethorphan
 	name = "Dextromethorphan"
+	cases = list("декстрометорфан", "декстрометорфана", "декстрометорфану", "декстрометорфан", "декстрометорфаном", "декстрометорфане")
 	id = "dextromethorphan"
-	description = "Analgesic chemical that heals lung damage and coughing."
+	description = "Анальгезирующее химическое вещество, заживляющее повреждения легких и кашель."
 	reagent_state = LIQUID
 	color = "#ffc0cb" // rgb: 255, 192, 203
 	overdose = REAGENTS_OVERDOSE / 3
@@ -265,8 +277,9 @@
 
 /datum/reagent/dexalinp
 	name = "Dexalin Plus"
+	cases = list("дексалин плюс", "дексалина плюс", "дексалину плюс", "дексалин плюс", "дексалином плюс", "дексалине плюс")
 	id = "dexalinp"
-	description = "Dexalin Plus is used in the treatment of oxygen deprivation. It is highly effective."
+	description = "Дексалин Плюс используется для лечения кислородного голодания. Он обладает высокой эффективностью."
 	reagent_state = LIQUID
 	color = "#0040ff" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE * 0.5
@@ -287,8 +300,9 @@
 
 /datum/reagent/tricordrazine
 	name = "Tricordrazine"
+	cases = list("трикордрацин", "трикордрацина", "трикордрацину", "трикордрацин", "трикордрацином", "трикордрацине")
 	id = "tricordrazine"
-	description = "Tricordrazine is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
+	description = "Трикордрацин - сильнодействующий стимулятор, первоначально полученный из кордрацина. Может использоваться для лечения широкого спектра травм."
 	reagent_state = LIQUID
 	color = "#00b080" // rgb: 200, 165, 220
 	overdose = REAGENTS_OVERDOSE * 2
@@ -317,8 +331,9 @@
 
 /datum/reagent/anti_toxin
 	name = "Anti-Toxin (Dylovene)"
+	cases = list("анти-токсин(диловен)", "анти-токсина(диловена)", "анти-токсину(диловену)", "анти-токсин(диловен)", "анти-токсином(диловеном)", "анти-токсине(диловене)")
 	id = "anti_toxin"
-	description = "Dylovene is a broad-spectrum antitoxin."
+	description = "Диловен - это антитоксин широкого спектра действия."
 	reagent_state = LIQUID
 	color = "#00a000" // rgb: 200, 165, 220
 	taste_message = null
@@ -335,8 +350,9 @@
 
 /datum/reagent/thermopsis
 	name = "Thermopsis"
+	cases = list("термопсис", "термопсиса", "термопсису", "термопсис", "термопсисом", "термопсисе")
 	id = "thermopsis"
-	description = "Irritates stomach receptors, that leads to reflex rise of vomiting."
+	description = "Раздражает рецепторы желудка, что приводит к рефлекторному возникновению рвоты."
 	reagent_state = LIQUID
 	color = "#a0a000"
 	taste_message = "vomit"
@@ -357,8 +373,9 @@
 
 /datum/reagent/adminordrazine //An OP chemical for admins
 	name = "Adminordrazine"
+	cases = list("админодразин", "админодразина", "админодразину", "админодразин", "админодразином", "админодразине")
 	id = "adminordrazine"
-	description = "It's magic. We don't have to explain it."
+	description = "Это магия. Мы не должны объяснять это."
 	reagent_state = LIQUID
 	color = "#c8a5dc" // rgb: 200, 165, 220
 	taste_message = "admin abuse"
