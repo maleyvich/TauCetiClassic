@@ -15104,9 +15104,6 @@
 	icon_state = "dark"
 	},
 /area/custom/syndicate_mothership)
-"aHF" = (
-/turf/unsimulated/floor,
-/area/space)
 "aHG" = (
 /obj/machinery/door/airlock/maintenance_hatch{
 	dir = 4;
@@ -22385,7 +22382,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "bgb" = (
 /obj/structure/rack,
@@ -22477,7 +22473,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "bnb" = (
 /turf/unsimulated/floor{
 	dir = 4;
@@ -22489,7 +22485,6 @@
 	icon_state = "10,2"
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "bob" = (
 /obj/structure/mopbucket,
@@ -22837,7 +22832,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "bKC" = (
 /obj/structure/cult/forge,
@@ -23058,7 +23052,6 @@
 	pixel_y = -1
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "cbb" = (
 /turf/unsimulated/floor{
@@ -23209,7 +23202,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "ckb" = (
 /obj/item/weapon/flora/random,
 /obj/structure/centcom_barrier,
@@ -23363,7 +23356,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "cxb" = (
 /obj/item/weapon/flora/random,
 /turf/unsimulated/floor{
@@ -23459,7 +23452,6 @@
 "cHG" = (
 /obj/structure/stool/bed/chair/schair/wagon,
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "cIb" = (
 /obj/machinery/firealarm{
@@ -23581,7 +23573,6 @@
 	icon_state = "9,6"
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "cRb" = (
 /obj/machinery/door/poddoor{
@@ -23958,7 +23949,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "dpb" = (
 /obj/structure/rail_centcomm{
 	icon_state = "rail_03"
@@ -24403,7 +24394,6 @@
 /area/velocity/monorailwagon)
 "dWn" = (
 /turf/simulated/shuttle/floor/evac/eng1,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "dXb" = (
 /obj/structure/shuttle/window{
@@ -24418,7 +24408,6 @@
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "dYb" = (
 /obj/machinery/door/poddoor{
@@ -24535,7 +24524,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "ehN" = (
 /obj/structure/stool/bed/chair/schair/wagon,
 /obj/structure/extinguisher_cabinet{
@@ -24965,7 +24954,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "eVb" = (
 /obj/structure/object_wall/velocity{
 	dir = 8;
@@ -25238,7 +25227,6 @@
 	pixel_y = 26
 	},
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "fsb" = (
 /obj/machinery/door/airlock/centcom{
@@ -25443,7 +25431,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "fNb" = (
 /obj/effect/decal/turf_decal{
@@ -25625,11 +25612,11 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "gaA" = (
 /obj/machinery/light,
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "gbb" = (
 /obj/structure/rack,
 /obj/item/clothing/suit/space/rig/ert/engineer,
@@ -26031,7 +26018,6 @@
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "gEb" = (
 /obj/structure/sign/velocity_overlay{
@@ -26232,7 +26218,7 @@
 	dir = 8
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "gVb" = (
 /obj/machinery/light,
 /turf/unsimulated/floor{
@@ -26288,7 +26274,6 @@
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "gZb" = (
 /turf/unsimulated/floor{
@@ -26419,14 +26404,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/shuttle/floor/vox,
 /area/shuttle/vox/arkship)
-"hkh" = (
-/obj/structure/object_wall/evac{
-	density = 0;
-	icon_state = "0,8";
-	opacity = 0
-	},
-/turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
 "hlb" = (
 /obj/structure/sign/warning/securearea,
 /turf/unsimulated/wall,
@@ -26486,7 +26463,6 @@
 	opacity = 0
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "hob" = (
 /obj/structure/sign/velocity_overlay{
@@ -26507,7 +26483,6 @@
 /obj/item/weapon/pen,
 /obj/structure/table,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "hpb" = (
 /obj/structure/sign/velocity_overlay{
@@ -26642,7 +26617,6 @@
 	name = "Engineering Airlock"
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "hBb" = (
 /turf/unsimulated/floor{
@@ -26775,7 +26749,6 @@
 	req_access = list(19)
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "hQb" = (
 /obj/structure/sign/monorail_map,
@@ -26982,8 +26955,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "ijQ" = (
 /obj/structure/object_wall/evac{
 	icon_state = "11,4"
@@ -27015,14 +26987,12 @@
 	opacity = 0
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ioP" = (
 /obj/structure/object_wall/evac{
 	icon_state = "8,2"
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ipb" = (
 /turf/unsimulated/floor{
@@ -27108,7 +27078,6 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "iAb" = (
 /obj/machinery/door/airlock/hatch{
@@ -27210,7 +27179,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "iKb" = (
 /obj/machinery/door/airlock/centcom{
@@ -27556,7 +27524,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "joI" = (
 /obj/machinery/door/airlock/centcom{
@@ -27642,13 +27609,13 @@
 	},
 /area/centcom/control)
 "jyi" = (
-/obj/machinery/door/airlock/centcom{
+/obj/machinery/door/poddoor{
 	dir = 4;
-	name = "Hall";
-	req_access = list(150)
+	id = "ERTBase";
+	name = "ERT"
 	},
-/turf/unsimulated/wall,
-/area/custom/syndicate_mothership)
+/turf/unsimulated/floor,
+/area/space)
 "jzb" = (
 /obj/structure/window/thin/reinforced{
 	dir = 8
@@ -27783,7 +27750,6 @@
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "jLb" = (
 /turf/unsimulated/floor{
@@ -27835,7 +27801,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "jQb" = (
 /obj/structure/mineral_door/wood,
@@ -28189,7 +28154,6 @@
 "kvm" = (
 /obj/structure/stool/bed/chair/schair/wagon,
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "kwb" = (
 /obj/machinery/vending/coffee,
@@ -28327,7 +28291,6 @@
 	icon_state = "10,18"
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "kHb" = (
 /turf/unsimulated/floor{
@@ -28590,7 +28553,6 @@
 "lfI" = (
 /obj/machinery/computer/shuttle,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "lgb" = (
 /obj/structure/stool/bed/chair/comfy/black,
@@ -28617,7 +28579,6 @@
 	pixel_x = -32
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ljb" = (
 /turf/unsimulated/floor{
@@ -28766,7 +28727,6 @@
 	icon_state = "7,2"
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "lwb" = (
 /obj/machinery/computer/arcade,
@@ -28910,7 +28870,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "lOG" = (
 /obj/structure/object_wall/evac{
@@ -28998,7 +28957,6 @@
 	pixel_x = -4
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "lWr" = (
 /obj/structure/object_wall/standart{
@@ -29239,7 +29197,6 @@
 	icon_state = "6,2"
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "mvb" = (
 /obj/machinery/vending/cigarette,
@@ -29265,9 +29222,16 @@
 /turf/simulated/shuttle/floor/evac,
 /area/shuttle/syndicate/hijackedshuttle)
 "mxa" = (
-/turf/simulated/shuttle/floor/evac,
-/area/space,
-/area/shuttle/syndicate/hijackedshuttle)
+/obj/machinery/door_control{
+	id = "ERTBase";
+	name = "Shutters";
+	pixel_w = 10;
+	pixel_x = 32;
+	pixel_y = 2;
+	pixel_z = 10
+	},
+/turf/unsimulated/floor,
+/area/custom/syndicate_mothership)
 "mxb" = (
 /obj/structure/table{
 	icon_state = "tabledir"
@@ -29303,7 +29267,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/light,
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "mzq" = (
 /obj/effect/decal/cleanable/blood,
@@ -29774,7 +29737,6 @@
 "nAm" = (
 /obj/machinery/computer/aifixer,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "nBb" = (
 /obj/structure/rack,
@@ -29826,7 +29788,6 @@
 	pixel_y = 2
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "nFb" = (
 /obj/structure/table,
@@ -29867,7 +29828,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "nJb" = (
 /obj/machinery/camera{
@@ -30154,7 +30114,6 @@
 	pixel_y = -32
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ojb" = (
 /obj/machinery/door/window/brigdoor{
@@ -30186,7 +30145,6 @@
 /area/shuttle/transport1/centcom)
 "omn" = (
 /turf/simulated/shuttle/floor/evac/eva,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "onb" = (
 /obj/machinery/sleeper{
@@ -30197,7 +30155,6 @@
 "onF" = (
 /obj/structure/reagent_dispensers/aqueous_foam_tank,
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "oob" = (
 /obj/structure/object_wall/evac{
@@ -30256,7 +30213,6 @@
 	pixel_y = -2
 	},
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ouG" = (
 /obj/structure/window/thin/reinforced{
@@ -30354,7 +30310,6 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "oHb" = (
 /obj/structure/object_wall/evac{
@@ -30592,7 +30547,6 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "pjb" = (
 /obj/structure/object_wall/evac{
@@ -30731,7 +30685,6 @@
 	opacity = 0
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "pyb" = (
 /obj/machinery/computer/crew/erokez,
@@ -30790,7 +30743,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "pHb" = (
 /obj/item/stack/medical/bruise_pack,
@@ -30929,7 +30881,6 @@
 	opacity = 0
 	},
 /turf/environment/space,
-/area/shuttle/syndicate/hijackedshuttle,
 /area/shuttle/syndicate/hijackedshuttle)
 "pXb" = (
 /obj/structure/object_wall/evac{
@@ -30955,7 +30906,6 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "qab" = (
 /obj/machinery/computer/aifixer,
@@ -30995,7 +30945,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "qgq" = (
 /obj/structure/object_wall/evac{
@@ -31003,7 +30952,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "qgB" = (
 /obj/structure/object_wall/evac{
@@ -31032,7 +30980,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "qsd" = (
 /obj/machinery/recharge_station,
 /obj/structure/sign/poster/contraband/borg_fancy_2{
@@ -31089,7 +31037,6 @@
 	pixel_y = 31
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "qJV" = (
 /obj/structure/object_wall/evac{
@@ -31106,7 +31053,6 @@
 	icon_state = "10,6"
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "qTT" = (
 /obj/structure/window/fulltile/reinforced{
@@ -31132,7 +31078,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "rkK" = (
 /obj/item/weapon/flora/pottedplant/tropicalfern{
 	pixel_y = 5
@@ -31246,7 +31192,6 @@
 "soc" = (
 /obj/machinery/computer/crew/erokez,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ssN" = (
 /turf/unsimulated/wall/abductor{
@@ -31269,7 +31214,6 @@
 /obj/machinery/computer/security/wooden_tv/miami,
 /obj/structure/table,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "sMK" = (
 /obj/machinery/door/unpowered/shuttle/pod{
@@ -31342,7 +31286,6 @@
 	icon_state = "9,2"
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "tgk" = (
 /obj/machinery/door/airlock/erokez/sec{
@@ -31410,7 +31353,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "ueM" = (
 /obj/structure/object_wall/evac{
@@ -31418,14 +31360,12 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "ugc" = (
 /obj/structure/object_wall/evac{
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "uhF" = (
 /obj/structure/object_wall/evac{
@@ -31433,7 +31373,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "uka" = (
 /obj/structure/object_wall/evac{
 	icon_state = "11,7"
@@ -31443,7 +31383,6 @@
 "uog" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/shuttle/floor/evac/eng2,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "urt" = (
 /obj/structure/stool/bed/roller,
@@ -31660,7 +31599,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "voK" = (
 /obj/structure/table/glass,
 /obj/item/weapon/flora/deskleaf{
@@ -31678,7 +31617,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "vpK" = (
 /obj/machinery/light{
 	dir = 4
@@ -31686,7 +31625,6 @@
 /obj/item/weapon/phone,
 /obj/structure/table,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "vqv" = (
 /obj/structure/object_wall/evac{
@@ -31694,7 +31632,6 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "vvr" = (
 /obj/structure/object_wall/evac{
@@ -31718,14 +31655,12 @@
 	},
 /obj/structure/stool/bed/chair/schair/wagon,
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "vFL" = (
 /obj/structure/object_wall/evac{
 	icon_state = "6,6"
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "vIr" = (
 /obj/structure/object_wall/evac{
@@ -31733,7 +31668,6 @@
 	opacity = 0
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "vLb" = (
 /obj/effect/decal/cleanable/blood/gibs/core,
@@ -31813,7 +31747,6 @@
 "wKE" = (
 /obj/machinery/computer/communications/evac,
 /turf/simulated/shuttle/floor/evac,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "wRz" = (
 /obj/structure/table/glass{
@@ -31880,7 +31813,7 @@
 	dir = 4
 	},
 /turf/unsimulated/floor,
-/area/space)
+/area/custom/syndicate_mothership)
 "xze" = (
 /obj/structure/object_wall/evac{
 	icon_state = "9,6"
@@ -31890,7 +31823,6 @@
 	pixel_y = -1
 	},
 /turf/environment/space,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "xzP" = (
 /turf/unsimulated/floor{
@@ -31915,7 +31847,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "xCW" = (
 /obj/structure/object_wall/evac{
 	icon_state = "4,5"
@@ -31958,7 +31890,6 @@
 	pixel_y = 4
 	},
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "xTK" = (
 /obj/machinery/conveyor{
@@ -31993,7 +31924,7 @@
 	opacity = 0
 	},
 /turf/unsimulated/floor,
-/area/shuttle/syndicate/hijackedshuttle)
+/area/custom/syndicate_mothership)
 "ycG" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Restroom";
@@ -32012,7 +31943,6 @@
 	},
 /obj/structure/stool/bed/chair/schair/wagon,
 /turf/simulated/shuttle/floor/evac/place,
-/area/space,
 /area/shuttle/syndicate/hijackedshuttle)
 "yfz" = (
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -86815,32 +86745,32 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 gUi
 gUi
 gUi
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-hkh
-hkh
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -87072,11 +87002,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 tRe
 tzl
 sco
@@ -87093,11 +87023,11 @@ dFW
 vbQ
 ePt
 qpc
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -87329,11 +87259,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 mJz
 mwl
 iGF
@@ -87352,8 +87282,8 @@ sYM
 dgv
 ouN
 yae
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -87586,11 +87516,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 jcp
 hdT
 hdT
@@ -87609,8 +87539,8 @@ kCG
 nCw
 dhT
 ehk
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -87843,11 +87773,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 aVa
 mwl
 uPG
@@ -87866,8 +87796,8 @@ wDU
 xCW
 tdO
 xBY
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -88100,8 +88030,8 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
+aIb
+aIb
 bms
 dND
 lmh
@@ -88367,8 +88297,8 @@ hog
 vFL
 jKI
 oFn
-mxa
-mxa
+hdT
+hdT
 kvm
 vEU
 xQW
@@ -88619,17 +88549,17 @@ nIz
 pwu
 wKE
 pZU
-mxa
+hdT
 ize
 caQ
 kvm
 kvm
-mxa
-mxa
+hdT
+hdT
 kvm
 kvm
 kvm
-mxa
+hdT
 kvm
 kvm
 kvm
@@ -88876,20 +88806,20 @@ qel
 ioN
 lfI
 pZU
-mxa
-mxa
+hdT
+hdT
 hPX
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
-mxa
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
+hdT
 hAR
 omn
 dWn
@@ -89133,17 +89063,17 @@ lOo
 pWX
 soc
 pZU
-mxa
+hdT
 oix
 cQi
 kvm
 kvm
-mxa
-mxa
+hdT
+hdT
 kvm
 kvm
 kvm
-mxa
+hdT
 kvm
 kvm
 kvm
@@ -89395,8 +89325,8 @@ vpK
 kGR
 kvm
 gYW
-mxa
-mxa
+hdT
+hdT
 kvm
 yfn
 gDh
@@ -89642,8 +89572,8 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
+aIb
+aIb
 uhF
 dey
 rjX
@@ -89899,11 +89829,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 weG
 lxy
 nxg
@@ -89922,8 +89852,8 @@ hlr
 giA
 mpT
 eUG
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -90156,11 +90086,11 @@ aaM
 aaM
 aaM
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 mJz
 qdz
 hdT
@@ -90179,8 +90109,8 @@ fLt
 eHM
 ggh
 gav
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -90413,11 +90343,11 @@ aeD
 aeD
 aeD
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 jcp
 lxy
 rJQ
@@ -90436,8 +90366,8 @@ oNB
 gCs
 xeb
 doq
-aHF
-aHF
+aIb
+aIb
 gaA
 aeD
 aaM
@@ -90658,23 +90588,23 @@ amm
 aIb
 amJ
 jyi
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 iiP
 uVT
 qlp
@@ -90691,11 +90621,11 @@ nQZ
 eWW
 uQE
 voN
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -90915,44 +90845,44 @@ amm
 aIb
 amJ
 jyi
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-hkh
-hkh
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+mxa
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -91181,35 +91111,35 @@ aeD
 aeD
 aeD
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -91439,34 +91369,34 @@ ahF
 ahF
 aeD
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM
@@ -91697,33 +91627,33 @@ ahF
 ahF
 ahF
 aeD
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 xws
 xws
 xws
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
-aHF
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
+aIb
 aeD
 aaM
 aaM

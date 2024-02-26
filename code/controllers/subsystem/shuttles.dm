@@ -138,6 +138,10 @@ SUBSYSTEM_DEF(shuttle)
 					dock_act(end_location, "shuttle_escape")
 					dock_act(/area/centcom/evac, "shuttle_escape")
 
+					var/obj/machinery/computer/shuttle/S = null
+					if(S.emagged)
+						end_location = locate(/area/shuttle/syndicate/hijackedshuttle)
+
 							//pods
 					start_location = locate(/area/shuttle/escape_pod1/transit)
 					end_location = locate(/area/shuttle/escape_pod1/centcom)
