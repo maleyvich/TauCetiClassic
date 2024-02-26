@@ -138,9 +138,11 @@ SUBSYSTEM_DEF(shuttle)
 					dock_act(end_location, "shuttle_escape")
 					dock_act(/area/centcom/evac, "shuttle_escape")
 
-					var/obj/machinery/computer/shuttle/S = null
+					var/obj/machinery/computer/shuttle/S
 					if(S.emagged)
 						end_location = locate(/area/shuttle/syndicate/hijackedshuttle)
+					dock_act(end_location, "hijacked_shuttle")
+
 
 							//pods
 					start_location = locate(/area/shuttle/escape_pod1/transit)
@@ -278,6 +280,11 @@ SUBSYSTEM_DEF(shuttle)
 				for(var/mob/M in end_location)
 					M.playsound_local(null, 'sound/effects/escape_shuttle/es_acceleration.ogg', VOL_EFFECTS_MASTER, null, FALSE)
 				shake_mobs_in_area(end_location, SOUTH)
+
+				var/obj/machinery/computer/shuttle/S
+				if(S.emagged)
+					end_location = locate(/area/shuttle/syndicate/hijackedshuttle)
+					dock_act(end_location, "hijacked_shuttle")
 
 				//pods
 				if(alert == 0) // Crew Transfer not for pods
