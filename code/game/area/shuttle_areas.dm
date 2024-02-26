@@ -331,6 +331,13 @@
 	cases = list("передовая оперативная база Синдиката", "передовой оперативной базы Синдиката", "передовой оперативной базе Синдиката", "передовую оперативную базу Синдиката", "передовой оперативной базой Синдиката", "передовой оперативной базе Синдиката")
 	icon_state = "yellow"
 
+/area/shuttle/syndicate/hijackedshuttle
+	name = "Hijacked Emergency Shuttle"
+	icon_state = "yellow"
+	requires_power = 0
+	dynamic_lighting = DYNAMIC_LIGHTING_FORCED
+	looped_ambience = 'sound/ambience/loop_nuke_ops.ogg'
+
 /area/shuttle/syndicate/southwest
 	name = "south-west of station"
 	cases = list("юго-запад от станции", "юго-запада от станции", "юго-западу от станции", "юго-запад от станции", "юго-западом от станции", "юго-западе от станции")

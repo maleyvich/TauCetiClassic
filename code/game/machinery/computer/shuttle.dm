@@ -68,6 +68,7 @@
 			if("Запуск")
 				to_chat(world, "<span class='notice'><B>Тревога: активирована экстренная отстыковка шаттла. Взлёт через 10 секунд!</B></span>")
 				SSshuttle.settimeleft( 10 )
+				SSshuttle.end_location = locate(/area/shuttle/syndicate/hijackedshuttle)
 				emagged = 1
 				return TRUE
 			if("Отмена")
