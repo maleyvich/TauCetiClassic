@@ -7380,6 +7380,9 @@
 	pixel_y = -7;
 	req_access = list(2)
 	},
+/obj/machinery/door/window/westright{
+	name = "Brig Desk"
+	},
 /turf/simulated/floor{
 	icon_state = "dark"
 	},
@@ -7388,9 +7391,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor{
 	dir = 4
-	},
-/obj/machinery/door/window/westright{
-	name = "Brig Desk"
 	},
 /turf/simulated/floor{
 	icon_state = "dark"
@@ -7954,6 +7954,9 @@
 	dir = 1
 	},
 /obj/structure/stool/bed/chair/office/dark,
+/obj/machinery/door/window/southright{
+	name = "Brig Desk"
+	},
 /turf/simulated/floor{
 	icon_state = "dark"
 	},
@@ -8101,9 +8104,6 @@
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
 /obj/item/weapon/bell,
-/obj/machinery/door/window/southleft{
-	name = "Brig Desk"
-	},
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 4;
@@ -8544,6 +8544,12 @@
 	name = "Security Monitor";
 	network = list("Security");
 	pixel_x = -28
+	},
+/obj/machinery/door/window/southright{
+	name = "Brig Desk"
+	},
+/obj/machinery/door/window/westright{
+	name = "Brig Desk"
 	},
 /turf/simulated/floor{
 	icon_state = "dark"
@@ -9013,9 +9019,6 @@
 "aoQ" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/window/southright{
-	name = "Brig Desk"
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
@@ -9982,17 +9985,12 @@
 /turf/simulated/floor/plating,
 /area/station/civilian/hydroponics)
 "aqE" = (
-/obj/structure/table/reinforced,
-/obj/machinery/door/firedoor{
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/window/westleft{
-	name = "Brig Desk"
-	},
-/turf/simulated/floor{
-	icon_state = "dark"
-	},
-/area/station/security/brig)
+/turf/simulated/floor,
+/area/station/security/prison)
 "aqF" = (
 /obj/machinery/chem_master,
 /turf/simulated/floor{
@@ -30124,6 +30122,21 @@
 	icon_state = "dark"
 	},
 /area/station/tcommsat/computer)
+"bbt" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor{
+	icon_state = "redcorner"
+	},
+/area/station/security/brig)
 "bbu" = (
 /obj/structure/stool/bed/chair/wood/normal{
 	dir = 8
@@ -70008,21 +70021,6 @@
 	icon_state = "yellow"
 	},
 /area/station/engineering/break_room)
-"doP" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor{
-	icon_state = "redcorner"
-	},
-/area/station/security/brig)
 "dpb" = (
 /obj/structure/sign/warning/secure_area/armory,
 /turf/simulated/wall/r_wall,
@@ -71736,15 +71734,6 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/station/cargo/recycleroffice)
-"foM" = (
-/obj/machinery/light/smart,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor{
-	icon_state = "redcorner"
-	},
-/area/station/security/brig)
 "foN" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -72974,6 +72963,19 @@
 	},
 /turf/simulated/floor/plating/airless/catwalk,
 /area/station/solar/port)
+"gET" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor{
+	dir = 8;
+	icon_state = "redcorner"
+	},
+/area/station/security/brig)
 "gFL" = (
 /obj/machinery/door/firedoor{
 	dir = 4
@@ -74069,13 +74071,6 @@
 	icon_state = "freezerfloor"
 	},
 /area/station/civilian/toilet)
-"hIN" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/station/security/prison)
 "hJb" = (
 /obj/structure/sign/warning/securearea{
 	pixel_x = 32
@@ -80268,6 +80263,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
+"odG" = (
+/obj/machinery/light/smart,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor{
+	icon_state = "redcorner"
+	},
+/area/station/security/brig)
 "odL" = (
 /turf/simulated/wall,
 /area/station/hallway/secondary/arrival)
@@ -80418,17 +80422,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
 /area/station/maintenance/incinerator)
-"omH" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/structure/disposaloutlet{
-	dir = 4
-	},
-/turf/simulated/floor{
-	icon_state = "dark"
-	},
-/area/station/security/prison)
 "onb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/wall/r_wall,
@@ -80948,6 +80941,14 @@
 	},
 /turf/simulated/floor,
 /area/station/hallway/primary/central)
+"oYy" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor{
+	icon_state = "dark"
+	},
+/area/station/security/prison)
 "oZb" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -87231,19 +87232,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/station/maintenance/engineering)
-"xMl" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor{
-	dir = 8;
-	icon_state = "redcorner"
-	},
-/area/station/security/brig)
 "xMz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -113559,7 +113547,7 @@ adM
 aor
 aoJ
 apK
-omH
+oYy
 avO
 apq
 asu
@@ -113816,7 +113804,7 @@ anE
 amb
 ams
 apP
-hIN
+aqE
 asF
 auS
 axL
@@ -116895,7 +116883,7 @@ aiy
 akJ
 aiB
 alJ
-doP
+bbt
 amS
 amg
 apv
@@ -117409,7 +117397,7 @@ aeq
 aeq
 ajw
 alI
-foM
+odG
 adJ
 adJ
 adJ
@@ -118437,10 +118425,10 @@ agV
 ajp
 ajx
 alK
-xMl
+gET
 adM
 ami
-aqE
+ami
 adJ
 arC
 ati
