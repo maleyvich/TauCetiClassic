@@ -83,6 +83,9 @@ var/global/can_call_ert
 	else
 		custom_objective = sanitize(input(usr, "Какая задача будет у ОБР?", "Настройка цели", "Помогите экипажу станции"))
 		changing_objective = TRUE
+		var/ERT_confirmation = tgui_alert(usr, "Действительно ли вы хотите вызвать ОБР?", "ERT", list("Нет", "Да"))
+		if(ERT_confirmation == "Нет")
+			return
 
 	create_spawners(team.spawner, team.spawners_amount)
 	var/datum/faction/responders/ERT = SSticker.mode.CreateFaction(team.faction)
