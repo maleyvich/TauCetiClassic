@@ -695,10 +695,15 @@ var/global/GLOBAL_RADIO_TYPE = 1 // radio type to use
 	else
 		return ..()
 
-/obj/item/device/radio/emp_act(severity)
+/obj/item/device/radio/emp_act(severity, mob/user)
 	if(!grid)
 		on = 0
 		..()
+		if(hidden_uplink)
+			hidden_uplink.toggle()
+			on = 0
+			user << browse(null, "window=hidden")
+			return 1
 /*	broadcasting = 0
 	listening = 0
 	for (var/ch_name in channels)
