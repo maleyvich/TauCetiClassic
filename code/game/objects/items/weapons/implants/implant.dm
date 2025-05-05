@@ -443,6 +443,7 @@ var/global/list/death_alarm_stealth_areas = list(
 	cases = list("имплант оповещения о смерти", "импланта оповещения о смерти", "импланту оповещения о смерти", "имплант оповещения о смерти", "имплантом оповещения о смерти", "импланте оповещения о смерти")
 	desc = "Сигнализация, отслеживающая жизненные показатели хозяина и передающая радиосообщение в случае смерти."
 	var/mobname = "Will Robinson"
+	var/death_timer_id = 0
 
 /obj/item/weapon/implant/death_alarm/inject(mob/living/carbon/C, def_zone)
 	. = ..()
@@ -470,8 +471,16 @@ var/global/list/death_alarm_stealth_areas = list(
 	else if(M.stat == DEAD)
 		activate("death")
 
-/obj/item/weapon/implant/death_alarm/proc/play_death_sound()
-	playsound(src, 'sound/effects/death_alarm2.ogg', VOL_EFFECTS_MISC, vary = FALSE)
+/obj/item/weapon/implant/death_alarm/proc/play_death_alarm()
+    death_timer_id = addtimer(CALLBACK(PROC_REF(play_death_alarm)), 2 SECONDS, TIMER_UNIQUE|TIMER_STOPPABLE)
+    for(var/mob/M in player_list)
+        if (is_station_level(M.z))
+            var/area/A = get_area(M)
+            if (is_type_in_typecache(A, quiet_alarm_areas))
+                M.playsound_local(get_turf(M), 'sound/effects/death_alarm2.ogg', VOL_EFFECTS_MISC, 20, FALSE)
+            else if (is_type_in_typecache(A, loud_alarm_areas))
+                M.playsound_local(get_turf(M), 'sound/effects/death_alarm2.ogg', VOL_EFFECTS_MISC, null, FALSE)
+    return
 
 /obj/item/weapon/implant/death_alarm/activate(cause)
 	var/mob/M = imp_in
@@ -500,7 +509,8 @@ var/global/list/death_alarm_stealth_areas = list(
 			STOP_PROCESSING(SSobj, src)
 			qdel(a)
 
-	addtimer(CALLBACK(src, PROC_REF(play_death_sound)), 5 SECOND)
+	if(!death_timer_id)
+		play_death_alarm()
 
 /obj/item/weapon/implant/death_alarm/emp_act(severity)			//for some reason alarms stop going off in case they are emp'd, even without this
 	if (malfunction)		//so I'm just going to add a meltdown chance here
@@ -513,6 +523,7 @@ var/global/list/death_alarm_stealth_areas = list(
 			meltdown()
 		else if (prob(60))	//but more likely it will just quietly die
 			malfunction = MALFUNCTION_PERMANENT
+			deltimer(death_timer_id)
 		STOP_PROCESSING(SSobj, src)
 
 	spawn(20)
