@@ -470,6 +470,9 @@ var/global/list/death_alarm_stealth_areas = list(
 	else if(M.stat == DEAD)
 		activate("death")
 
+/obj/item/weapon/implant/death_alarm/proc/play_death_sound()
+	playsound(src, 'sound/effects/death_alarm2.ogg', VOL_EFFECTS_MISC, vary = FALSE)
+
 /obj/item/weapon/implant/death_alarm/activate(cause)
 	var/mob/M = imp_in
 	var/area/t = get_area(M)
@@ -478,20 +481,26 @@ var/global/list/death_alarm_stealth_areas = list(
 			var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset(null)
 			if(is_type_in_list(t, global.death_alarm_stealth_areas))
 				//give the syndies a bit of stealth
-				a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))] в космосе!", "Оповещение о смерти [mobname]")
+				a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))] в космосе! Активирован звуковой сигнал", "Оповещение о смерти [mobname]")
+				playsound(src, 'sound/effects/death_alarm.ogg', VOL_EFFECTS_MISC, vary = FALSE)
 			else
-				a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))]. Местоположение: [CASE(t, NOMINATIVE_CASE)]!", "Оповещение о смерти [mobname]")
+				a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))]. Активирован звуковой сигнал!", "Оповещение о смерти [mobname]")
+				playsound(src, 'sound/effects/death_alarm.ogg', VOL_EFFECTS_MISC, vary = FALSE)
 			STOP_PROCESSING(SSobj, src)
 			qdel(a)
 		if ("emp")
 			var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset(null)
-			a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))]. Местоположение: [CASE(t, NOMINATIVE_CASE)]!", "Оповещение о смерти [mobname]")
+			a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))]. Активирован звуковой сигнал!", "Оповещение о смерти [mobname]")
+			playsound(src, 'sound/effects/death_alarm.ogg', VOL_EFFECTS_MISC, vary = FALSE)
 			qdel(a)
 		else
 			var/obj/item/device/radio/headset/a = new /obj/item/device/radio/headset(null)
-			a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))] в-в-в- бз-з-з-з-з...", "Оповещение о смерти [mobname]")
+			a.autosay("[mobname] [(ANYMORPH(M, "погиб", "погибла", "погибло", "погибли"))]... А-а-а-ктивация зву-укового сигнала!", "Оповещение о смерти [mobname]")
+			playsound(src, 'sound/effects/death_alarm.ogg', VOL_EFFECTS_MISC, vary = FALSE)
 			STOP_PROCESSING(SSobj, src)
 			qdel(a)
+
+	addtimer(CALLBACK(src, PROC_REF(play_death_sound)), 5 SECOND)
 
 /obj/item/weapon/implant/death_alarm/emp_act(severity)			//for some reason alarms stop going off in case they are emp'd, even without this
 	if (malfunction)		//so I'm just going to add a meltdown chance here
