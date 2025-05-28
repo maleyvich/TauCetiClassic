@@ -472,7 +472,7 @@ var/global/list/death_alarm_stealth_areas = list(
 		activate("death")
 
 /obj/item/weapon/implant/death_alarm/proc/play_death_alarm()
-    death_timer_id = addtimer(CALLBACK(PROC_REF(play_death_alarm)), 2 SECONDS, TIMER_UNIQUE|TIMER_STOPPABLE)
+    death_timer_id = addtimer(CALLBACK(src, PROC_REF(play_death_alarm)), 2 SECONDS, TIMER_UNIQUE|TIMER_STOPPABLE)
     for(var/mob/M in player_list)
         if (is_station_level(M.z))
             var/area/A = get_area(M)
