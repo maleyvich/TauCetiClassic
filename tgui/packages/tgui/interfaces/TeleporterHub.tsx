@@ -8,28 +8,36 @@ type Data = {
   calibration: string;
 };
 
-export const Fax = (props, context) => {
+export const TeleporterHub = (props, context) => {
   const { act, data } = useBackend<Data>(context);
   const { regime, target, calibration } = data;
 
   return (
     <Window width={480} height={320}>
       <Window.Content>
-        <Stack width="100%" textAlign="base">
+        <Stack width="100%" vertical mt={1}>
           <Stack.Item grow bold={1}>
-            Teleporter Status
+            Current Regime:
           </Stack.Item>
-          <Stack.Item>Current Regime: {regime}</Stack.Item>
-          <Stack.Item>Current Target: {target}</Stack.Item>
-          <Stack.Item>Calibration: {calibration}</Stack.Item>
+          <Stack.Item>
+            <Dropdown
+              minWidth={12}
+              textAlign="base"
+              selected={regime}
+              options={regime}
+              onSelected={(dept) => act('setDestination', { to: dept })}
+            />
+          </Stack.Item>
+          <Stack.Item grow>Current Target: {target}</Stack.Item>
+          <Stack.Item grow>Calibration: {calibration}</Stack.Item>
+          <Divider />
         </Stack>
         <Stack>
-          <Divider />
           <Stack.Item>
             <Button
               icon="eject"
               content={'Set Regime'}
-              onClick={() => act('scan')}
+              onClick={() => act('regimeset')}
             />
           </Stack.Item>
           <Stack.Item>
@@ -40,8 +48,7 @@ export const Fax = (props, context) => {
             />
           </Stack.Item>
         </Stack>
-        <Stack>
-          <Divider />
+        <Stack mt={1}>
           <Stack.Item>
             <Button
               icon="eject"

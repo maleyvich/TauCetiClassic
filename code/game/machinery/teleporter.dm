@@ -49,91 +49,69 @@
 	return
 
 /obj/machinery/computer/teleporter/ui_interact(mob/user)
-	var/data = "<h3>Teleporter Status</h3>"
-	if(!power_station)
-		data += "<div class='Section'>No power station linked.</div>"
-	else if(!power_station.teleporter_hub)
-		data += "<div class='Section'>No hub linked.</div>"
-	else
-		data += "<div class='Section'>Current regime: [regime_set]<BR>"
-		data += "Current target: [(!target) ? "None" : "[get_area(target)] [(regime_set != "Gate") ? "" : "Teleporter"]"]<BR>"
-		if(calibrating)
-			data += "Calibration: <font color='yellow'>In Progress</font>"
-		else if(power_station.teleporter_hub.calibrated || power_station.teleporter_hub.accurate >= 3)
-			data += "Calibration: <font color='green'>Optimal</font>"
-		else
-			data += "Calibration: <font color='red'>Sub-Optimal</font>"
-		data += "</div><BR>"
+	tgui_interact(user)
 
-		data += "<A href='byond://?src=\ref[src];regimeset=1'>Change regime</A><BR>"
-		data += "<A href='byond://?src=\ref[src];settarget=1'>Set target</A><BR>"
-		if(locked)
-			data += "<BR><A href='byond://?src=\ref[src];locked=1'>Get target from memory</A><BR>"
-			data += "<A href='byond://?src=\ref[src];eject=1'>Eject GPS device</A><BR>"
-		else
-			data += "<BR><span class='disabled'>Get target from memory</span><BR>"
-			data += "<span class='disabled'>Eject GPS device</span><BR>"
-		data += "<BR><A href='byond://?src=\ref[src];calibrate=1'>Calibrate Hub</A>"
+/obj/machinery/computer/teleporter/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "TeleporterHub", name)
+		ui.open()
 
-	var/datum/browser/popup = new(user, "teleporter", name, 400, 400)
-	popup.set_content(data)
-	popup.open()
+/obj/machinery/computer/teleporter/tgui_data(mob/user)
+	var/list/data = list(
+		"regime" = regime_set,
+		"target" = target,
+		"calibration" = calibrating,
+	)
+	return data
 
-/obj/machinery/computer/teleporter/Topic(href, href_list)
+/obj/machinery/computer/teleporter/tgui_act(action, params, obj/item/O)
 	. = ..()
-	if(!.)
+	if(.)
 		return
 
-	if(href_list["eject"])
-		eject()
-		updateDialog()
-		return
+	switch(action)
+		if("eject")
+			eject()
+			return
 
-	if(!check_hub_connection())
-		to_chat(usr, "<span class='warning'>Error: Unable to detect hub.</span>")
-		return FALSE
-	if(calibrating)
-		to_chat(usr, "<span class='warning'>Error: Calibration in progress. Stand by.</span>")
-		return FALSE
-
-	if(href_list["regimeset"])
-		power_station.engaged = 0
-		power_station.teleporter_hub.update_icon()
-		power_station.teleporter_hub.calibrated = 0
-		reset_regime()
-	if(href_list["settarget"])
-		power_station.engaged = 0
-		power_station.teleporter_hub.update_icon()
-		power_station.teleporter_hub.calibrated = 0
-		set_target(usr)
-	if(href_list["locked"])
-		power_station.engaged = 0
-		power_station.teleporter_hub.update_icon()
-		power_station.teleporter_hub.calibrated = 0
-		target = get_turf(locked.locked_location)
-	if(href_list["calibrate"])
-		if(!target)
-			to_chat(usr, "<span class='danger'>Error: No target set to calibrate to.</span>")
-			playsound(src, 'sound/machines/buzz-two.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
-			return FALSE
-		if(power_station.teleporter_hub.calibrated || power_station.teleporter_hub.accurate >= 3)
-			to_chat(usr, "<span class='warning'>Hub is already calibrated!</span>")
-			playsound(src, 'sound/machines/buzz-two.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
-			return FALSE
-		to_chat(usr, "<span class='notice'>Processing hub calibration to target...</span>")
-
-		calibrating = 1
-		spawn(50 * (3 - power_station.teleporter_hub.accurate)) //Better parts mean faster calibration
-			calibrating = 0
-			if(check_hub_connection())
-				power_station.teleporter_hub.calibrated = 1
-				to_chat(usr, "<span class='notice'>Calibration complete.</span>")
-				playsound(src, 'sound/machines/calibration_complete.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
-			else
-				to_chat(usr, "<span class='danger'>Error: Unable to detect hub.</span>")
+		if("regimeset")
+			power_station.engaged = 0
+			power_station.teleporter_hub.update_icon()
+			power_station.teleporter_hub.calibrated = 0
+			reset_regime()
+		if("settarget")
+			power_station.engaged = 0
+			power_station.teleporter_hub.update_icon()
+			power_station.teleporter_hub.calibrated = 0
+			set_target(usr)
+		if("locked")
+			power_station.engaged = 0
+			power_station.teleporter_hub.update_icon()
+			power_station.teleporter_hub.calibrated = 0
+			target = get_turf(locked.locked_location)
+		if("calibrate")
+			if(!target)
+				to_chat(usr, "<span class='danger'>Error: No target set to calibrate to.</span>")
 				playsound(src, 'sound/machines/buzz-two.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
+				return FALSE
+			if(power_station.teleporter_hub.calibrated || power_station.teleporter_hub.accurate >= 3)
+				to_chat(usr, "<span class='warning'>Hub is already calibrated!</span>")
+				playsound(src, 'sound/machines/buzz-two.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
+				return FALSE
+			to_chat(usr, "<span class='notice'>Processing hub calibration to target...</span>")
 
-	updateDialog()
+			calibrating = 1
+			spawn(50 * (3 - power_station.teleporter_hub.accurate)) //Better parts mean faster calibration
+				calibrating = 0
+				if(check_hub_connection())
+					power_station.teleporter_hub.calibrated = 1
+					to_chat(usr, "<span class='notice'>Calibration complete.</span>")
+					playsound(src, 'sound/machines/calibration_complete.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
+				else
+					to_chat(usr, "<span class='danger'>Error: Unable to detect hub.</span>")
+					playsound(src, 'sound/machines/buzz-two.ogg', VOL_EFFECTS_MASTER, vary = FALSE)
+
 
 /obj/machinery/computer/teleporter/proc/check_hub_connection()
 	if(!power_station)
