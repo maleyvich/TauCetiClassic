@@ -42,12 +42,14 @@ ADD_TO_GLOBAL_LIST(/obj/machinery/computer/cargo, cargo_consoles)
 	contraband = board.contraband_enabled
 	hacked = board.hacked
 
-/obj/machinery/computer/cargo/ui_interact(mob/user)
-	var/dat
-	if(!requestonly)
-		post_signal("supply")
-	if(temp)
-		dat = temp
+/obj/machinery/computer/cargo/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "SupplyConsole", name)
+		ui.open()
+
+/obj/machinery/faxmachine/ui_interact(mob/user)
+	tgui_interact(user)
 	else
 		dat += "<HR><B>Supply shuttle Location:</B> [SSshuttle.moving ? "Moving to station ([SSshuttle.eta] Mins.)":SSshuttle.at_station ? "Station":"Dock"]<BR>"
 		if(!requestonly)
