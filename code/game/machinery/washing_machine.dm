@@ -118,6 +118,16 @@ var/global/list/dyed_item_types = list(
 	),
 )
 
+
+#define WM_STATE_EMPTY_OPEN    1
+#define WM_STATE_EMPTY_CLOSED  2
+#define WM_STATE_FULL_OPEN     3
+#define WM_STATE_FULL_CLOSED   4
+#define WM_STATE_RUNNING       5
+#define WM_STATE_BLOOD_OPEN    6
+#define WM_STATE_BLOOD_CLOSED  7
+#define WM_STATE_BLOOD_RUNNING 8
+
 /obj/machinery/washing_machine
 	name = "Washing Machine"
 	desc = "Washes your bloody clothes."
@@ -125,181 +135,198 @@ var/global/list/dyed_item_types = list(
 	icon_state = "wm_10"
 	density = TRUE
 	anchored = TRUE
-	use_power = NO_POWER_USE
-	var/state = 1
-	//1 = empty, open door
-	//2 = empty, closed door
-	//3 = full, open door
-	//4 = full, closed door
-	//5 = running
-	//6 = blood, open door
-	//7 = blood, closed door
-	//8 = blood, running
-	var/panel = 0
-	//0 = closed
-	//1 = open
-	var/hacked = 1 //Bleh, screw hacking, let's have it hacked by default.
-	//0 = not hacked
-	//1 = hacked
-	var/gibs_ready = 0
-	var/obj/crayon
+	panel_open = FALSE
+
+	use_power = IDLE_POWER_USE
+	idle_power_usage = 10
+	active_power_usage = 100
+
+	var/state = WM_STATE_EMPTY_OPEN
+	var/gibs_ready = FALSE
+	var/obj/item/crayon = null
+
+/obj/machinery/washing_machine/atom_init()
+	. = ..()
+	update_icon()
 
 /obj/machinery/washing_machine/Destroy()
 	QDEL_NULL(crayon)
 	return ..()
 
-/obj/machinery/washing_machine/proc/get_wash_color()
-	if(!crayon)
-		return null
+/obj/machinery/washing_machine/update_icon()
+	icon_state = "wm_[state][panel_open ? "1" : "0"]"
 
-	if(istype(crayon,/obj/item/toy/crayon))
-		var/obj/item/toy/crayon/CR = crayon
-		return CR.colourName
+/obj/machinery/washing_machine/AltClick(mob/user)
+	if(!user || !Adjacent(user) || user.incapacitated())
+		return ..()
 
-	if(istype(crayon,/obj/item/weapon/stamp))
-		var/obj/item/weapon/stamp/ST = crayon
-		return ST.dye_color
-
-	return null
-
-/obj/machinery/washing_machine/proc/wash(atom/A, w_color)
-	A.clean_blood()
-
-	if(!isitem(A))
-		return
-	var/obj/item/I = A
-	I.wash_act(w_color)
-
-/obj/machinery/washing_machine/verb/start()
-	set name = "Start Washing"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!isliving(usr)) //ew ew ew usr, but it's the only way to check.
+	if(state == WM_STATE_RUNNING || state == WM_STATE_BLOOD_RUNNING)
 		return
 
-	if( state != 4 )
-		to_chat(usr, "The washing machine cannot run in this state.")
+	if(state == WM_STATE_FULL_CLOSED || state == WM_STATE_BLOOD_CLOSED)
+		if(user.is_busy())
+			return
+		start_washing(user)
+	else if(state in list(WM_STATE_EMPTY_OPEN, WM_STATE_FULL_OPEN, WM_STATE_BLOOD_OPEN))
+		to_chat(user, "<span class='warning'>Сначала закройте дверцу.</span>")
+
+/obj/machinery/washing_machine/attack_hand(mob/user)
+	if(!Adjacent(user))
 		return
 
-	if( locate(/mob,contents) )
-		state = 8
+	. = ..()
+	if(.)
+		return
+
+	user.SetNextMove(CLICK_CD_INTERACT)
+
+	switch(state)
+		if(WM_STATE_EMPTY_CLOSED)
+			state = WM_STATE_EMPTY_OPEN
+			dump_contents()
+
+		if(WM_STATE_FULL_CLOSED)
+			state = WM_STATE_FULL_OPEN
+			dump_contents()
+
+		if(WM_STATE_BLOOD_CLOSED)
+			state = WM_STATE_BLOOD_OPEN
+			dump_contents()
+			if(gibs_ready)
+				new /obj/effect/gibspawner/generic(loc)
+				gibs_ready = FALSE
+
+		if(WM_STATE_EMPTY_OPEN)
+			state = (contents.len || crayon) ? WM_STATE_FULL_CLOSED : WM_STATE_EMPTY_CLOSED
+
+		if(WM_STATE_FULL_OPEN)
+			state = WM_STATE_FULL_CLOSED
+
+		if(WM_STATE_BLOOD_OPEN)
+			state = WM_STATE_BLOOD_CLOSED
+
+		if(WM_STATE_RUNNING, WM_STATE_BLOOD_RUNNING)
+			to_chat(user, "<span class='warning'>Нельзя открывать работающую машинку!</span>")
+			return
+
+	update_icon()
+
+/obj/machinery/washing_machine/attackby(obj/item/I, mob/user)
+	if(iswrenching(I))
+		default_unfasten_wrench(user, I)
+		return
+
+	if(state in list(WM_STATE_EMPTY_CLOSED, WM_STATE_FULL_CLOSED, WM_STATE_BLOOD_CLOSED, WM_STATE_RUNNING, WM_STATE_BLOOD_RUNNING))
+		to_chat(user, "<span class='warning'>Дверца закрыта.</span>")
+		return
+
+	if(istype(I, /obj/item/toy/crayon) || istype(I, /obj/item/weapon/stamp))
+		if(!crayon)
+			if(user.drop_from_inventory(I, src))
+				crayon = I
+				to_chat(user, "<span class='notice'>Вы положили [I] в лоток для красителя.</span>")
+				if(state == WM_STATE_EMPTY_OPEN)
+					state = WM_STATE_FULL_OPEN
+				update_icon()
+		else
+			to_chat(user, "<span class='warning'>Лоток для красителя уже занят.</span>")
+		return
+
+	if(is_type_in_typecache(I, global.washing_items_list))
+		if(I.w_class > SIZE_NORMAL)
+			to_chat(user, "<span class='warning'>[I] не влезает в барабан.</span>")
+			return
+
+		if(contents.len < 5)
+			if(user.drop_from_inventory(I, src))
+				state = WM_STATE_FULL_OPEN
+				update_icon()
+		else
+			to_chat(user, "<span class='warning'>Машинка переполнена!</span>")
+		return
+
+	..()
+
+/obj/machinery/washing_machine/proc/start_washing(mob/user)
+	if(stat & (NOPOWER|BROKEN))
+		return
+
+	visible_message("<span class='notice'>[src] начинает цикл стирки.</span>")
+
+	if(locate(/mob/living) in contents)
+		state = WM_STATE_BLOOD_RUNNING
 	else
-		state = 5
+		state = WM_STATE_RUNNING
+
+	use_power = ACTIVE_POWER_USE
 	update_icon()
 	playsound(src, 'sound/items/washingmachine.ogg', VOL_EFFECTS_MASTER)
-	sleep(210)
+
+	addtimer(CALLBACK(src, PROC_REF(finish_washing)), 200)
+
+/obj/machinery/washing_machine/proc/finish_washing()
+	use_power = IDLE_POWER_USE
+
+	if(stat & (NOPOWER|BROKEN))
+		update_icon()
+		return
 
 	var/w_color = get_wash_color()
+	var/found_mob = FALSE
 
-	for(var/I as anything in contents)
-		wash(I, w_color)
+	for(var/obj/item/I in contents)
+		I.clean_blood()
+		if(w_color)
+			I.wash_act(w_color)
+
+	for(var/mob/living/L in contents)
+		found_mob = TRUE
+		L.gib()
 
 	if(crayon)
 		QDEL_NULL(crayon)
 
-	if( locate(/mob,contents) )
-		state = 7
-		gibs_ready = 1
+	if(found_mob)
+		state = WM_STATE_BLOOD_CLOSED
+		gibs_ready = TRUE
 	else
-		state = 4
+		state = (contents.len) ? WM_STATE_FULL_CLOSED : WM_STATE_EMPTY_CLOSED
+
 	update_icon()
+	visible_message("<span class='notice'>[src] заканчивает стирку.</span>")
+	playsound(src, 'sound/machines/ping.ogg', VOL_EFFECTS_MASTER)
 
-/obj/machinery/washing_machine/verb/climb_out()
-	set name = "Climb out"
-	set category = "Object"
-	set src in usr.loc
+/obj/machinery/washing_machine/proc/dump_contents()
+	for(var/atom/movable/AM in contents)
+		AM.forceMove(loc)
 
-	sleep(20)
-	if(state in list(1,3,6) )
-		usr.loc = src.loc
+	if(crayon)
+		crayon.forceMove(loc)
+		crayon = null
 
-
-/obj/machinery/washing_machine/update_icon()
-	icon_state = "wm_[state][panel]"
-
-/obj/machinery/washing_machine/attackby(obj/item/weapon/W, mob/user)
-	if(iswrenching(W))
-		default_unfasten_wrench(user, W)
-		return
-
-	if(istype(W,/obj/item/toy/crayon) ||istype(W,/obj/item/weapon/stamp))
-		if( state in list(	1, 3, 6 ) )
-			if(!crayon)
-				user.drop_from_inventory(W, src)
-				crayon = W
-			else
-				..()
-		else
-			..()
-	else if(istype(W,/obj/item/weapon/grab))
-		if( (state == 1) && hacked)
-			var/obj/item/weapon/grab/G = W
-			if(ishuman(G.assailant) && (iscorgi(G.affecting) || isIAN(G.affecting)))
-				G.affecting.loc = src
-				qdel(G)
-				state = 3
-		else
-			..()
-	else if(is_type_in_typecache(W, global.washing_items_list))
-		if(!W.canremove) //if "can't drop" item
-			to_chat(user, "<span class='notice'>\The [W] is stuck to your hand, you cannot put it in the washing machine!</span>")
-			return
-
-		if(contents.len < 5)
-			if ( state in list(1, 3) )
-				user.drop_from_inventory(W, src)
-				state = 3
-			else
-				to_chat(user, "<span class='notice'>You can't put the item in right now.</span>")
-		else
-			to_chat(user, "<span class='notice'>The washing machine is full.</span>")
-	else
-		..()
-	update_icon()
+/obj/machinery/washing_machine/proc/get_wash_color()
+	if(!crayon) return null
+	if(istype(crayon, /obj/item/toy/crayon))
+		var/obj/item/toy/crayon/CR = crayon
+		return CR.colourName
+	if(istype(crayon, /obj/item/weapon/stamp))
+		var/obj/item/weapon/stamp/ST = crayon
+		return ST.dye_color
+	return null
 
 /obj/machinery/washing_machine/deconstruct(disassembled)
-	if (flags & NODECONSTRUCT)
+	if(flags & NODECONSTRUCT)
 		return ..()
+	dump_contents()
 	new /obj/item/stack/sheet/metal(loc, 2)
-	..()
+	qdel(src)
 
-/obj/machinery/washing_machine/attack_ai(mob/user)
-	if(IsAdminGhost(user))
-		return ..()
 
-/obj/machinery/washing_machine/attack_hand(mob/user)
-	if(..())
-		return 1
-	user.SetNextMove(CLICK_CD_RAPID)
-	switch(state)
-		if(1)
-			state = 2
-		if(2)
-			state = 1
-			for(var/atom/movable/O in contents)
-				O.loc = src.loc
-		if(3)
-			state = 4
-		if(4)
-			state = 3
-			for(var/atom/movable/O in contents)
-				O.loc = src.loc
-			crayon = null
-			state = 1
-		if(5)
-			to_chat(user, "<span class='warning'>The [src] is busy.</span>")
-		if(6)
-			state = 7
-		if(7)
-			if(gibs_ready)
-				gibs_ready = 0
-				if(locate(/mob,contents))
-					var/mob/M = locate(/mob,contents)
-					M.gib()
-			for(var/atom/movable/O in contents)
-				O.loc = src.loc
-			crayon = null
-			state = 1
-
-	update_icon()
+#undef WM_STATE_EMPTY_OPEN
+#undef WM_STATE_EMPTY_CLOSED
+#undef WM_STATE_FULL_OPEN
+#undef WM_STATE_FULL_CLOSED
+#undef WM_STATE_RUNNING
+#undef WM_STATE_BLOOD_OPEN
+#undef WM_STATE_BLOOD_CLOSED
+#undef WM_STATE_BLOOD_RUNNING
